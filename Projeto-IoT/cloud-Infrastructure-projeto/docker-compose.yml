@@ -1,3 +1,5 @@
+version: '3.8'
+
 services:
   node-red:
     image: nodered/node-red:latest
@@ -70,6 +72,14 @@ services:
       idc-net:
         ipv4_address: 172.100.10.12
     restart: unless-stopped
+
+    machine-learning:
+      build: .
+      container_name: ML
+      ports:
+        - "8888:8888"
+      volumes:
+        - ./data:/home
 
 networks:
   idc-net:

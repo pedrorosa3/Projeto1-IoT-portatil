@@ -7,6 +7,10 @@ import time
 import pandas as pd
 from load_db import load_stations, load_users
 from load_db import load_sessions
+
+import joblib
+kmeans = joblib.load("energy_cluster_kmeans.pkl")
+
 # ========================
 # CONFIG: MQTT & DB (definidas no docker-compose)
 # ========================
@@ -91,6 +95,12 @@ def on_message(client, userdata, message):
         payload.get("temperature"),
         source,
     ))
+    energy_value = payload.get("energy_consumed")
+    if energy_value is not None:
+        cluster = int(kmeans.predict([[energy_value]])[0])
+        print(f"⚡ Cluster atribuído: {cluster}")
+    else:
+        cluster = None
 
     print("💾 Sessão inserida na BD.")
 
