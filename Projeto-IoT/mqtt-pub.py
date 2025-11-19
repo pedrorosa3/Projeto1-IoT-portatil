@@ -35,7 +35,6 @@ client = mqtt.Client()
 client.tls_set(ca_certs="ca.crt",
 certfile="client.crt",
 keyfile="client.key",
-keyfile_password="60294-iot"
 )
 
 client.tls_insecure_set(True)
