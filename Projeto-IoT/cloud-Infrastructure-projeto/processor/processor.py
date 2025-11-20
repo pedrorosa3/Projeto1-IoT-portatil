@@ -7,9 +7,10 @@ import time
 import pandas as pd
 from load_db import load_stations, load_users
 from load_db import load_sessions
+import joblib, gzip
 
-import joblib
-kmeans = joblib.load("energy_cluster_kmeans.pkl")
+kmeans = joblib.load(gzip.open("/model/energy-kmeans.dat.gz"))
+
 
 # ========================
 # CONFIG: MQTT & DB (definidas no docker-compose)

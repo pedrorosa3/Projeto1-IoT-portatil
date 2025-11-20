@@ -7,6 +7,20 @@
         "info": ""
     },
     {
+        "id": "2156dd29c330d9be",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "client.crt",
+        "keyname": "client.key",
+        "caname": "ca.crt",
+        "servername": "",
+        "verifyservercert": false,
+        "alpnprotocol": ""
+    },
+    {
         "id": "037aecdc6926ce9a",
         "type": "mqtt-broker",
         "name": "IdC",
@@ -68,15 +82,15 @@
         "sessionExpiry": ""
     },
     {
-        "id": "2156dd29c330d9be",
+        "id": "6a43c5f4eb0e5eb6",
         "type": "tls-config",
-        "name": "",
+        "name": "TLS-projeto-IoT",
         "cert": "",
         "key": "",
         "ca": "",
-        "certname": "client.crt",
-        "keyname": "client.key",
-        "caname": "ca.crt",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
         "servername": "",
         "verifyservercert": false,
         "alpnprotocol": ""
@@ -116,7 +130,7 @@
         "topic": "idc/iris",
         "qos": "0",
         "datatype": "auto-detect",
-        "broker": "037aecdc6926ce9a",
+        "broker": "f5279b01.b328d8",
         "nl": false,
         "rap": true,
         "rh": 0,

@@ -7591,3 +7591,679 @@
 1763419465: Client <unknown> disconnected: Protocol error.
 1763419491: mosquitto version 2.0.22 terminating
 1763419491: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1763588161: mosquitto version 2.0.22 starting
+1763588161: Config loaded from /mosquitto/config/mosquitto.conf.
+1763588161: Opening ipv4 listen socket on port 8883.
+1763588161: mosquitto version 2.0.22 running
+1763588182: New connection from 172.100.10.15:41770 on port 8883.
+1763588182: New connection from 172.100.10.15:41776 on port 8883.
+1763588182: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588182: Client <unknown> disconnected: Protocol error.
+1763588182: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588182: Client <unknown> disconnected: Protocol error.
+1763588197: New connection from 172.100.10.15:48126 on port 8883.
+1763588197: New connection from 172.100.10.15:48132 on port 8883.
+1763588197: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588197: Client <unknown> disconnected: Protocol error.
+1763588197: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588197: Client <unknown> disconnected: Protocol error.
+1763588212: New connection from 172.100.10.15:51802 on port 8883.
+1763588212: New connection from 172.100.10.15:51812 on port 8883.
+1763588212: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588212: Client <unknown> disconnected: Protocol error.
+1763588212: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588212: Client <unknown> disconnected: Protocol error.
+1763588227: New connection from 172.100.10.15:59382 on port 8883.
+1763588227: New connection from 172.100.10.15:59388 on port 8883.
+1763588227: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588227: Client <unknown> disconnected: Protocol error.
+1763588227: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588227: Client <unknown> disconnected: Protocol error.
+1763588242: New connection from 172.100.10.15:35300 on port 8883.
+1763588242: New connection from 172.100.10.15:35306 on port 8883.
+1763588242: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588242: Client <unknown> disconnected: Protocol error.
+1763588242: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588242: Client <unknown> disconnected: Protocol error.
+1763588257: New connection from 172.100.10.15:55130 on port 8883.
+1763588257: New connection from 172.100.10.15:55134 on port 8883.
+1763588257: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588257: Client <unknown> disconnected: Protocol error.
+1763588257: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588257: Client <unknown> disconnected: Protocol error.
+1763588272: New connection from 172.100.10.15:52182 on port 8883.
+1763588272: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588272: Client <unknown> disconnected: Protocol error.
+1763588272: New connection from 172.100.10.15:52186 on port 8883.
+1763588272: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588272: Client <unknown> disconnected: Protocol error.
+1763588287: New connection from 172.100.10.15:38596 on port 8883.
+1763588287: New connection from 172.100.10.15:38598 on port 8883.
+1763588287: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588287: Client <unknown> disconnected: Protocol error.
+1763588287: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588287: Client <unknown> disconnected: Protocol error.
+1763588290: mosquitto version 2.0.22 terminating
+1763588290: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1763588353: mosquitto version 2.0.22 starting
+1763588353: Config loaded from /mosquitto/config/mosquitto.conf.
+1763588353: Opening ipv4 listen socket on port 8883.
+1763588353: mosquitto version 2.0.22 running
+1763588354: New connection from 172.100.10.15:43926 on port 8883.
+1763588354: New connection from 172.100.10.15:43936 on port 8883.
+1763588354: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588354: Client <unknown> disconnected: Protocol error.
+1763588354: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588354: Client <unknown> disconnected: Protocol error.
+1763588369: New connection from 172.100.10.15:60126 on port 8883.
+1763588369: New connection from 172.100.10.15:60132 on port 8883.
+1763588369: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588369: Client <unknown> disconnected: Protocol error.
+1763588369: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588369: Client <unknown> disconnected: Protocol error.
+1763588384: New connection from 172.100.10.15:45916 on port 8883.
+1763588384: New connection from 172.100.10.15:45922 on port 8883.
+1763588384: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588384: Client <unknown> disconnected: Protocol error.
+1763588384: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588384: Client <unknown> disconnected: Protocol error.
+1763588399: New connection from 172.100.10.15:40510 on port 8883.
+1763588399: New connection from 172.100.10.15:40520 on port 8883.
+1763588399: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588399: Client <unknown> disconnected: Protocol error.
+1763588399: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588399: Client <unknown> disconnected: Protocol error.
+1763588414: New connection from 172.100.10.15:45802 on port 8883.
+1763588414: New connection from 172.100.10.15:45808 on port 8883.
+1763588414: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588414: Client <unknown> disconnected: Protocol error.
+1763588414: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588414: Client <unknown> disconnected: Protocol error.
+1763588429: New connection from 172.100.10.15:40792 on port 8883.
+1763588429: New connection from 172.100.10.15:40808 on port 8883.
+1763588429: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588429: Client <unknown> disconnected: Protocol error.
+1763588429: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588429: Client <unknown> disconnected: Protocol error.
+1763588444: New connection from 172.100.10.15:55050 on port 8883.
+1763588444: New connection from 172.100.10.15:55062 on port 8883.
+1763588444: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588444: Client <unknown> disconnected: Protocol error.
+1763588444: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588444: Client <unknown> disconnected: Protocol error.
+1763588459: New connection from 172.100.10.15:37582 on port 8883.
+1763588459: New connection from 172.100.10.15:37584 on port 8883.
+1763588459: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588459: Client <unknown> disconnected: Protocol error.
+1763588459: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588459: Client <unknown> disconnected: Protocol error.
+1763588474: New connection from 172.100.10.15:47740 on port 8883.
+1763588474: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588474: Client <unknown> disconnected: Protocol error.
+1763588474: New connection from 172.100.10.15:47750 on port 8883.
+1763588474: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588474: Client <unknown> disconnected: Protocol error.
+1763588489: New connection from 172.100.10.15:45474 on port 8883.
+1763588489: New connection from 172.100.10.15:45484 on port 8883.
+1763588489: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588489: Client <unknown> disconnected: Protocol error.
+1763588489: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588489: Client <unknown> disconnected: Protocol error.
+1763588504: New connection from 172.100.10.15:52910 on port 8883.
+1763588504: New connection from 172.100.10.15:52918 on port 8883.
+1763588504: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588504: Client <unknown> disconnected: Protocol error.
+1763588504: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588504: Client <unknown> disconnected: Protocol error.
+1763588519: New connection from 172.100.10.15:46366 on port 8883.
+1763588519: New connection from 172.100.10.15:46368 on port 8883.
+1763588519: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588519: Client <unknown> disconnected: Protocol error.
+1763588519: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588519: Client <unknown> disconnected: Protocol error.
+1763588534: New connection from 172.100.10.15:54624 on port 8883.
+1763588534: New connection from 172.100.10.15:54628 on port 8883.
+1763588534: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588534: Client <unknown> disconnected: Protocol error.
+1763588534: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588534: Client <unknown> disconnected: Protocol error.
+1763588549: New connection from 172.100.10.15:43542 on port 8883.
+1763588549: New connection from 172.100.10.15:43552 on port 8883.
+1763588549: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588549: Client <unknown> disconnected: Protocol error.
+1763588549: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588549: Client <unknown> disconnected: Protocol error.
+1763588556: mosquitto version 2.0.22 terminating
+1763588556: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1763588655: mosquitto version 2.0.22 starting
+1763588655: Config loaded from /mosquitto/config/mosquitto.conf.
+1763588655: Opening ipv4 listen socket on port 8883.
+1763588655: mosquitto version 2.0.22 running
+1763588657: New connection from 172.100.10.15:50260 on port 8883.
+1763588657: New connection from 172.100.10.15:50266 on port 8883.
+1763588657: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588657: Client <unknown> disconnected: Protocol error.
+1763588657: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588657: Client <unknown> disconnected: Protocol error.
+1763588672: New connection from 172.100.10.15:59356 on port 8883.
+1763588672: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588672: Client <unknown> disconnected: Protocol error.
+1763588672: New connection from 172.100.10.15:59366 on port 8883.
+1763588672: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588672: Client <unknown> disconnected: Protocol error.
+1763588687: New connection from 172.100.10.15:60100 on port 8883.
+1763588687: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588687: Client <unknown> disconnected: Protocol error.
+1763588687: New connection from 172.100.10.15:60112 on port 8883.
+1763588687: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588687: Client <unknown> disconnected: Protocol error.
+1763588702: New connection from 172.100.10.15:59694 on port 8883.
+1763588702: New connection from 172.100.10.15:59706 on port 8883.
+1763588702: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588702: Client <unknown> disconnected: Protocol error.
+1763588702: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588702: Client <unknown> disconnected: Protocol error.
+1763588717: New connection from 172.100.10.15:59956 on port 8883.
+1763588717: New connection from 172.100.10.15:59970 on port 8883.
+1763588717: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588717: Client <unknown> disconnected: Protocol error.
+1763588717: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588717: Client <unknown> disconnected: Protocol error.
+1763588732: New connection from 172.100.10.15:35104 on port 8883.
+1763588732: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588732: Client <unknown> disconnected: Protocol error.
+1763588732: New connection from 172.100.10.15:35108 on port 8883.
+1763588732: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588732: Client <unknown> disconnected: Protocol error.
+1763588747: New connection from 172.100.10.15:39484 on port 8883.
+1763588747: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588747: Client <unknown> disconnected: Protocol error.
+1763588747: New connection from 172.100.10.15:39492 on port 8883.
+1763588747: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588747: Client <unknown> disconnected: Protocol error.
+1763588762: New connection from 172.100.10.15:34690 on port 8883.
+1763588762: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588762: Client <unknown> disconnected: Protocol error.
+1763588762: New connection from 172.100.10.15:34700 on port 8883.
+1763588762: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588762: Client <unknown> disconnected: Protocol error.
+1763588777: New connection from 172.100.10.15:51654 on port 8883.
+1763588777: New connection from 172.100.10.15:51656 on port 8883.
+1763588777: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588777: Client <unknown> disconnected: Protocol error.
+1763588777: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588777: Client <unknown> disconnected: Protocol error.
+1763588792: New connection from 172.100.10.15:47138 on port 8883.
+1763588792: New connection from 172.100.10.15:47146 on port 8883.
+1763588792: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588792: Client <unknown> disconnected: Protocol error.
+1763588792: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588792: Client <unknown> disconnected: Protocol error.
+1763588796: New connection from 172.100.10.15:47160 on port 8883.
+1763588796: OpenSSL Error[0]: error:0A0000C7:SSL routines::peer did not return a certificate
+1763588796: Client <unknown> disconnected: Protocol error.
+1763588807: New connection from 172.100.10.15:52678 on port 8883.
+1763588807: New connection from 172.100.10.15:52682 on port 8883.
+1763588807: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588807: Client <unknown> disconnected: Protocol error.
+1763588807: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588807: Client <unknown> disconnected: Protocol error.
+1763588822: New connection from 172.100.10.15:35962 on port 8883.
+1763588822: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588822: Client <unknown> disconnected: Protocol error.
+1763588822: New connection from 172.100.10.15:35974 on port 8883.
+1763588822: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588822: Client <unknown> disconnected: Protocol error.
+1763588837: New connection from 172.100.10.15:32814 on port 8883.
+1763588837: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588837: Client <unknown> disconnected: Protocol error.
+1763588837: New connection from 172.100.10.15:32822 on port 8883.
+1763588837: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588837: Client <unknown> disconnected: Protocol error.
+1763588852: New connection from 172.100.10.15:41048 on port 8883.
+1763588852: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588852: Client <unknown> disconnected: Protocol error.
+1763588852: New connection from 172.100.10.15:41050 on port 8883.
+1763588852: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588852: Client <unknown> disconnected: Protocol error.
+1763588867: New connection from 172.100.10.15:60900 on port 8883.
+1763588867: New connection from 172.100.10.15:60908 on port 8883.
+1763588867: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588867: Client <unknown> disconnected: Protocol error.
+1763588867: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588867: Client <unknown> disconnected: Protocol error.
+1763588882: New connection from 172.100.10.15:45096 on port 8883.
+1763588882: New connection from 172.100.10.15:45112 on port 8883.
+1763588882: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588882: Client <unknown> disconnected: Protocol error.
+1763588882: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588882: Client <unknown> disconnected: Protocol error.
+1763588897: New connection from 172.100.10.15:47360 on port 8883.
+1763588897: New connection from 172.100.10.15:47370 on port 8883.
+1763588897: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588897: Client <unknown> disconnected: Protocol error.
+1763588897: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588897: Client <unknown> disconnected: Protocol error.
+1763588912: New connection from 172.100.10.15:43284 on port 8883.
+1763588912: New connection from 172.100.10.15:43300 on port 8883.
+1763588912: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588912: Client <unknown> disconnected: Protocol error.
+1763588912: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588912: Client <unknown> disconnected: Protocol error.
+1763588927: New connection from 172.100.10.15:49714 on port 8883.
+1763588927: New connection from 172.100.10.15:49720 on port 8883.
+1763588927: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588927: Client <unknown> disconnected: Protocol error.
+1763588927: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588927: Client <unknown> disconnected: Protocol error.
+1763588942: New connection from 172.100.10.15:59316 on port 8883.
+1763588942: New connection from 172.100.10.15:59324 on port 8883.
+1763588942: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588942: Client <unknown> disconnected: Protocol error.
+1763588942: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588942: Client <unknown> disconnected: Protocol error.
+1763588957: New connection from 172.100.10.15:34076 on port 8883.
+1763588957: New connection from 172.100.10.15:34084 on port 8883.
+1763588957: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588957: Client <unknown> disconnected: Protocol error.
+1763588957: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588957: Client <unknown> disconnected: Protocol error.
+1763588972: New connection from 172.100.10.15:36964 on port 8883.
+1763588972: New connection from 172.100.10.15:36970 on port 8883.
+1763588972: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588972: Client <unknown> disconnected: Protocol error.
+1763588972: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588972: Client <unknown> disconnected: Protocol error.
+1763588987: New connection from 172.100.10.15:56996 on port 8883.
+1763588987: New connection from 172.100.10.15:57012 on port 8883.
+1763588987: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588987: Client <unknown> disconnected: Protocol error.
+1763588987: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763588987: Client <unknown> disconnected: Protocol error.
+1763589002: New connection from 172.100.10.15:52682 on port 8883.
+1763589002: New connection from 172.100.10.15:52684 on port 8883.
+1763589002: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589002: Client <unknown> disconnected: Protocol error.
+1763589002: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589002: Client <unknown> disconnected: Protocol error.
+1763589017: New connection from 172.100.10.15:46822 on port 8883.
+1763589017: New connection from 172.100.10.15:46836 on port 8883.
+1763589017: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589017: Client <unknown> disconnected: Protocol error.
+1763589017: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589017: Client <unknown> disconnected: Protocol error.
+1763589032: New connection from 172.100.10.15:38374 on port 8883.
+1763589032: New connection from 172.100.10.15:38380 on port 8883.
+1763589032: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589032: Client <unknown> disconnected: Protocol error.
+1763589032: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589032: Client <unknown> disconnected: Protocol error.
+1763589047: New connection from 172.100.10.15:42712 on port 8883.
+1763589047: New connection from 172.100.10.15:42728 on port 8883.
+1763589047: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589047: Client <unknown> disconnected: Protocol error.
+1763589047: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589047: Client <unknown> disconnected: Protocol error.
+1763589062: New connection from 172.100.10.15:60984 on port 8883.
+1763589062: New connection from 172.100.10.15:60990 on port 8883.
+1763589062: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589062: Client <unknown> disconnected: Protocol error.
+1763589062: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589062: Client <unknown> disconnected: Protocol error.
+1763589077: New connection from 172.100.10.15:48210 on port 8883.
+1763589077: New connection from 172.100.10.15:48212 on port 8883.
+1763589077: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589077: Client <unknown> disconnected: Protocol error.
+1763589077: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589077: Client <unknown> disconnected: Protocol error.
+1763589092: New connection from 172.100.10.15:49962 on port 8883.
+1763589092: New connection from 172.100.10.15:49976 on port 8883.
+1763589092: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589092: Client <unknown> disconnected: Protocol error.
+1763589092: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589092: Client <unknown> disconnected: Protocol error.
+1763589107: New connection from 172.100.10.15:59802 on port 8883.
+1763589107: New connection from 172.100.10.15:59808 on port 8883.
+1763589107: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589107: Client <unknown> disconnected: Protocol error.
+1763589107: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589107: Client <unknown> disconnected: Protocol error.
+1763589122: New connection from 172.100.10.15:50096 on port 8883.
+1763589122: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589122: Client <unknown> disconnected: Protocol error.
+1763589122: New connection from 172.100.10.15:50098 on port 8883.
+1763589122: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589122: Client <unknown> disconnected: Protocol error.
+1763589137: New connection from 172.100.10.15:59336 on port 8883.
+1763589137: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589137: Client <unknown> disconnected: Protocol error.
+1763589137: New connection from 172.100.10.15:59344 on port 8883.
+1763589137: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589137: Client <unknown> disconnected: Protocol error.
+1763589152: New connection from 172.100.10.15:39968 on port 8883.
+1763589152: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589152: Client <unknown> disconnected: Protocol error.
+1763589152: New connection from 172.100.10.15:39980 on port 8883.
+1763589152: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589152: Client <unknown> disconnected: Protocol error.
+1763589167: New connection from 172.100.10.15:49192 on port 8883.
+1763589167: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589167: Client <unknown> disconnected: Protocol error.
+1763589167: New connection from 172.100.10.15:49202 on port 8883.
+1763589167: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589167: Client <unknown> disconnected: Protocol error.
+1763589182: New connection from 172.100.10.15:44092 on port 8883.
+1763589182: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589182: Client <unknown> disconnected: Protocol error.
+1763589182: New connection from 172.100.10.15:44096 on port 8883.
+1763589182: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589182: Client <unknown> disconnected: Protocol error.
+1763589197: New connection from 172.100.10.15:52566 on port 8883.
+1763589197: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589197: Client <unknown> disconnected: Protocol error.
+1763589197: New connection from 172.100.10.15:52572 on port 8883.
+1763589197: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589197: Client <unknown> disconnected: Protocol error.
+1763589212: New connection from 172.100.10.15:39876 on port 8883.
+1763589212: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589212: Client <unknown> disconnected: Protocol error.
+1763589212: New connection from 172.100.10.15:39880 on port 8883.
+1763589212: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589212: Client <unknown> disconnected: Protocol error.
+1763589227: New connection from 172.100.10.15:46548 on port 8883.
+1763589227: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589227: Client <unknown> disconnected: Protocol error.
+1763589227: New connection from 172.100.10.15:46550 on port 8883.
+1763589227: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589227: Client <unknown> disconnected: Protocol error.
+1763589242: New connection from 172.100.10.15:53160 on port 8883.
+1763589242: New connection from 172.100.10.15:53162 on port 8883.
+1763589242: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589242: Client <unknown> disconnected: Protocol error.
+1763589242: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589242: Client <unknown> disconnected: Protocol error.
+1763589257: New connection from 172.100.10.15:49484 on port 8883.
+1763589257: New connection from 172.100.10.15:49496 on port 8883.
+1763589257: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589257: Client <unknown> disconnected: Protocol error.
+1763589257: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589257: Client <unknown> disconnected: Protocol error.
+1763589272: New connection from 172.100.10.15:57240 on port 8883.
+1763589272: New connection from 172.100.10.15:57252 on port 8883.
+1763589272: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589272: Client <unknown> disconnected: Protocol error.
+1763589272: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589272: Client <unknown> disconnected: Protocol error.
+1763589287: New connection from 172.100.10.15:56234 on port 8883.
+1763589287: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589287: Client <unknown> disconnected: Protocol error.
+1763589287: New connection from 172.100.10.15:56236 on port 8883.
+1763589287: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589287: Client <unknown> disconnected: Protocol error.
+1763589302: New connection from 172.100.10.15:54780 on port 8883.
+1763589302: New connection from 172.100.10.15:54792 on port 8883.
+1763589302: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589302: Client <unknown> disconnected: Protocol error.
+1763589302: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589302: Client <unknown> disconnected: Protocol error.
+1763589317: New connection from 172.100.10.15:47978 on port 8883.
+1763589317: New connection from 172.100.10.15:47992 on port 8883.
+1763589317: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589317: Client <unknown> disconnected: Protocol error.
+1763589317: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589317: Client <unknown> disconnected: Protocol error.
+1763589318: New connection from 172.100.10.15:48006 on port 8883.
+1763589318: OpenSSL Error[0]: error:0A0000C7:SSL routines::peer did not return a certificate
+1763589318: Client <unknown> disconnected: Protocol error.
+1763589332: New connection from 172.100.10.15:53250 on port 8883.
+1763589332: New connection from 172.100.10.15:53256 on port 8883.
+1763589332: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589332: Client <unknown> disconnected: Protocol error.
+1763589332: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589332: Client <unknown> disconnected: Protocol error.
+1763589347: New connection from 172.100.10.15:50962 on port 8883.
+1763589347: New connection from 172.100.10.15:50974 on port 8883.
+1763589347: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589347: Client <unknown> disconnected: Protocol error.
+1763589347: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589347: Client <unknown> disconnected: Protocol error.
+1763589362: New connection from 172.100.10.15:33350 on port 8883.
+1763589362: New connection from 172.100.10.15:33360 on port 8883.
+1763589362: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589362: Client <unknown> disconnected: Protocol error.
+1763589362: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589362: Client <unknown> disconnected: Protocol error.
+1763589377: New connection from 172.100.10.15:59652 on port 8883.
+1763589377: New connection from 172.100.10.15:59658 on port 8883.
+1763589377: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589377: Client <unknown> disconnected: Protocol error.
+1763589377: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589377: Client <unknown> disconnected: Protocol error.
+1763589385: mosquitto version 2.0.22 terminating
+1763589385: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1763589535: mosquitto version 2.0.22 starting
+1763589535: Config loaded from /mosquitto/config/mosquitto.conf.
+1763589535: Opening ipv4 listen socket on port 8883.
+1763589535: mosquitto version 2.0.22 running
+1763589539: New connection from 172.100.10.15:55674 on port 8883.
+1763589539: New connection from 172.100.10.15:55688 on port 8883.
+1763589539: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589539: Client <unknown> disconnected: Protocol error.
+1763589539: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589539: Client <unknown> disconnected: Protocol error.
+1763589554: New connection from 172.100.10.15:40788 on port 8883.
+1763589554: New connection from 172.100.10.15:40790 on port 8883.
+1763589554: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589554: Client <unknown> disconnected: Protocol error.
+1763589554: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589554: Client <unknown> disconnected: Protocol error.
+1763589569: New connection from 172.100.10.15:36746 on port 8883.
+1763589569: New connection from 172.100.10.15:36748 on port 8883.
+1763589569: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589569: Client <unknown> disconnected: Protocol error.
+1763589569: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589569: Client <unknown> disconnected: Protocol error.
+1763589584: New connection from 172.100.10.15:48664 on port 8883.
+1763589584: New connection from 172.100.10.15:48680 on port 8883.
+1763589584: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589584: Client <unknown> disconnected: Protocol error.
+1763589584: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589584: Client <unknown> disconnected: Protocol error.
+1763589599: New connection from 172.100.10.15:57116 on port 8883.
+1763589599: New connection from 172.100.10.15:57118 on port 8883.
+1763589599: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589599: Client <unknown> disconnected: Protocol error.
+1763589599: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589599: Client <unknown> disconnected: Protocol error.
+1763589614: New connection from 172.100.10.15:60442 on port 8883.
+1763589614: New connection from 172.100.10.15:60448 on port 8883.
+1763589614: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589614: Client <unknown> disconnected: Protocol error.
+1763589614: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589614: Client <unknown> disconnected: Protocol error.
+1763589629: New connection from 172.100.10.15:59352 on port 8883.
+1763589629: New connection from 172.100.10.15:59366 on port 8883.
+1763589629: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589629: Client <unknown> disconnected: Protocol error.
+1763589629: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589629: Client <unknown> disconnected: Protocol error.
+1763589644: New connection from 172.100.10.15:42148 on port 8883.
+1763589644: New connection from 172.100.10.15:42164 on port 8883.
+1763589644: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589644: Client <unknown> disconnected: Protocol error.
+1763589644: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589644: Client <unknown> disconnected: Protocol error.
+1763589659: New connection from 172.100.10.15:58578 on port 8883.
+1763589659: New connection from 172.100.10.15:58582 on port 8883.
+1763589659: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589659: Client <unknown> disconnected: Protocol error.
+1763589659: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589659: Client <unknown> disconnected: Protocol error.
+1763589674: New connection from 172.100.10.15:36256 on port 8883.
+1763589674: New connection from 172.100.10.15:36266 on port 8883.
+1763589674: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589674: Client <unknown> disconnected: Protocol error.
+1763589674: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589674: Client <unknown> disconnected: Protocol error.
+1763589690: New connection from 172.100.10.15:35000 on port 8883.
+1763589690: New connection from 172.100.10.15:35014 on port 8883.
+1763589690: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589690: Client <unknown> disconnected: Protocol error.
+1763589690: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589690: Client <unknown> disconnected: Protocol error.
+1763589696: New connection from 172.100.10.15:35018 on port 8883.
+1763589696: OpenSSL Error[0]: error:0A0000C7:SSL routines::peer did not return a certificate
+1763589696: Client <unknown> disconnected: Protocol error.
+1763589705: New connection from 172.100.10.15:50390 on port 8883.
+1763589705: New connection from 172.100.10.15:50396 on port 8883.
+1763589705: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589705: Client <unknown> disconnected: Protocol error.
+1763589705: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589705: Client <unknown> disconnected: Protocol error.
+1763589720: New connection from 172.100.10.15:40836 on port 8883.
+1763589720: New connection from 172.100.10.15:40842 on port 8883.
+1763589720: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589720: Client <unknown> disconnected: Protocol error.
+1763589720: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589720: Client <unknown> disconnected: Protocol error.
+1763589735: New connection from 172.100.10.15:45698 on port 8883.
+1763589735: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589735: Client <unknown> disconnected: Protocol error.
+1763589735: New connection from 172.100.10.15:45708 on port 8883.
+1763589735: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589735: Client <unknown> disconnected: Protocol error.
+1763589750: New connection from 172.100.10.15:57942 on port 8883.
+1763589750: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589750: Client <unknown> disconnected: Protocol error.
+1763589750: New connection from 172.100.10.15:57954 on port 8883.
+1763589750: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589750: Client <unknown> disconnected: Protocol error.
+1763589765: New connection from 172.100.10.15:41884 on port 8883.
+1763589765: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589765: Client <unknown> disconnected: Protocol error.
+1763589765: New connection from 172.100.10.15:41892 on port 8883.
+1763589765: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589765: Client <unknown> disconnected: Protocol error.
+1763589780: New connection from 172.100.10.15:49694 on port 8883.
+1763589780: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589780: Client <unknown> disconnected: Protocol error.
+1763589780: New connection from 172.100.10.15:49702 on port 8883.
+1763589780: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589780: Client <unknown> disconnected: Protocol error.
+1763589795: New connection from 172.100.10.15:47692 on port 8883.
+1763589795: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589795: Client <unknown> disconnected: Protocol error.
+1763589795: New connection from 172.100.10.15:47698 on port 8883.
+1763589795: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589795: Client <unknown> disconnected: Protocol error.
+1763589810: New connection from 172.100.10.15:49700 on port 8883.
+1763589810: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589810: Client <unknown> disconnected: Protocol error.
+1763589810: New connection from 172.100.10.15:49716 on port 8883.
+1763589810: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589810: Client <unknown> disconnected: Protocol error.
+1763589825: New connection from 172.100.10.15:32986 on port 8883.
+1763589825: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589825: Client <unknown> disconnected: Protocol error.
+1763589825: New connection from 172.100.10.15:32994 on port 8883.
+1763589825: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589825: Client <unknown> disconnected: Protocol error.
+1763589840: New connection from 172.100.10.15:46534 on port 8883.
+1763589840: New connection from 172.100.10.15:46550 on port 8883.
+1763589840: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589840: Client <unknown> disconnected: Protocol error.
+1763589840: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589840: Client <unknown> disconnected: Protocol error.
+1763589855: New connection from 172.100.10.15:39248 on port 8883.
+1763589855: New connection from 172.100.10.15:39262 on port 8883.
+1763589855: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589855: Client <unknown> disconnected: Protocol error.
+1763589855: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589855: Client <unknown> disconnected: Protocol error.
+1763589870: New connection from 172.100.10.15:43628 on port 8883.
+1763589870: New connection from 172.100.10.15:43638 on port 8883.
+1763589870: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589870: Client <unknown> disconnected: Protocol error.
+1763589870: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589870: Client <unknown> disconnected: Protocol error.
+1763589885: New connection from 172.100.10.15:35982 on port 8883.
+1763589885: New connection from 172.100.10.15:35996 on port 8883.
+1763589885: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589885: Client <unknown> disconnected: Protocol error.
+1763589885: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589885: Client <unknown> disconnected: Protocol error.
+1763589900: New connection from 172.100.10.15:46328 on port 8883.
+1763589900: New connection from 172.100.10.15:46338 on port 8883.
+1763589900: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589900: Client <unknown> disconnected: Protocol error.
+1763589900: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589900: Client <unknown> disconnected: Protocol error.
+1763589915: New connection from 172.100.10.15:54398 on port 8883.
+1763589915: New connection from 172.100.10.15:54408 on port 8883.
+1763589915: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589915: Client <unknown> disconnected: Protocol error.
+1763589915: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589915: Client <unknown> disconnected: Protocol error.
+1763589930: New connection from 172.100.10.15:56816 on port 8883.
+1763589930: New connection from 172.100.10.15:56818 on port 8883.
+1763589930: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589930: Client <unknown> disconnected: Protocol error.
+1763589930: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589930: Client <unknown> disconnected: Protocol error.
+1763589945: New connection from 172.100.10.15:43148 on port 8883.
+1763589945: New connection from 172.100.10.15:43164 on port 8883.
+1763589945: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589945: Client <unknown> disconnected: Protocol error.
+1763589945: OpenSSL Error[0]: error:0A000086:SSL routines::certificate verify failed
+1763589945: Client <unknown> disconnected: Protocol error.
+1763589947: New connection from 172.100.10.15:43168 on port 8883.
+1763589947: New client connected from 172.100.10.15:43168 as nodered9c41d5982102e1d6 (p2, c1, k60, u'localhost').
+1763590550: Client nodered9c41d5982102e1d6 disconnected.
+1763590550: mosquitto version 2.0.22 terminating
+1763590550: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1763590566: mosquitto version 2.0.22 starting
+1763590566: Config loaded from /mosquitto/config/mosquitto.conf.
+1763590566: Opening ipv4 listen socket on port 8883.
+1763590566: mosquitto version 2.0.22 running
+1763590580: New connection from 172.100.10.15:33150 on port 8883.
+1763590580: New client connected from 172.100.10.15:33150 as nodered47d89c5f803e1150 (p2, c1, k60, u'localhost').
+1763592366: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1763593621: Client nodered47d89c5f803e1150 disconnected.
+1763593621: mosquitto version 2.0.22 terminating
+1763593621: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1763594010: mosquitto version 2.0.22 starting
+1763594010: Config loaded from /mosquitto/config/mosquitto.conf.
+1763594010: Opening ipv4 listen socket on port 8883.
+1763594010: mosquitto version 2.0.22 running
+1763594015: New connection from 172.100.10.15:43730 on port 8883.
+1763594015: New client connected from 172.100.10.15:43730 as nodered13a64b7cb3e57280 (p2, c1, k60, u'localhost').
+1763594233: mosquitto version 2.0.22 terminating
+1763594233: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1763594651: mosquitto version 2.0.22 starting
+1763594651: Config loaded from /mosquitto/config/mosquitto.conf.
+1763594651: Opening ipv4 listen socket on port 8883.
+1763594651: mosquitto version 2.0.22 running
+1763594656: New connection from 172.100.10.15:54890 on port 8883.
+1763594656: New client connected from 172.100.10.15:54890 as nodered6759931475f7e402 (p2, c1, k60, u'localhost').
+1763594807: Client nodered6759931475f7e402 disconnected.
+1763594808: mosquitto version 2.0.22 terminating
+1763594808: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1763594822: mosquitto version 2.0.22 starting
+1763594822: Config loaded from /mosquitto/config/mosquitto.conf.
+1763594822: Opening ipv4 listen socket on port 8883.
+1763594822: mosquitto version 2.0.22 running
+1763594824: New connection from 172.100.10.15:58524 on port 8883.
+1763594824: New client connected from 172.100.10.15:58524 as nodereda5ffd088b26b1aa5 (p2, c1, k60, u'localhost').
+1763596623: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1763597619: Client nodereda5ffd088b26b1aa5 disconnected.
+1763597620: mosquitto version 2.0.22 terminating
+1763597620: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1763597753: mosquitto version 2.0.22 starting
+1763597753: Config loaded from /mosquitto/config/mosquitto.conf.
+1763597753: Opening ipv4 listen socket on port 8883.
+1763597753: mosquitto version 2.0.22 running
+1763597758: New connection from 172.100.10.15:35390 on port 8883.
+1763597758: New client connected from 172.100.10.15:35390 as nodered053722f0adcf9f69 (p2, c1, k60, u'localhost').
+1763597887: Client nodered053722f0adcf9f69 disconnected.
+1763597887: mosquitto version 2.0.22 terminating
+1763597887: Saving in-memory database to /mosquitto/data//mosquitto.db.

@@ -1,15 +1,23 @@
 import pandas as pd
 from sklearn.cluster import KMeans
 import joblib
+import gzip
+import os
 
 print("📘 Training KMeans clustering model...")
 
-df = pd.read_csv("EV-session.csv")
+# Garantir diretoria models
+os.makedirs("models", exist_ok=True)
+
+df = pd.read_csv("EV-session.csv", sep=";")
 
 df.columns = [
+    "user_id",
     "vehicle_model",
     "battery_capacity",
     "station_id",
+    "charging_start_time",
+    "charging_end_time",
     "energy_consumed",
     "charging_duration",
     "charging_rate",
@@ -23,16 +31,35 @@ df.columns = [
     "vehicle_age"
 ]
 
+# Converter valores com vírgula
+df["energy_consumed"] = df["energy_consumed"].astype(str).str.replace(",", ".")
+df["energy_consumed"] = df["energy_consumed"].astype(float)
+
 X = df[["energy_consumed"]]
 
-# Treinar com 3 clusters
+
+'''
+models = [
+    ('KMEANS', KMeans(n_clusters=3, random_state=42)),
+    ('KMEANS_SOC', KMeans(n_clusters=3, random_state=42)),
+    # etc...
+]
+
+for name, model in models:
+    model.fit(X)
+    joblib.dump(model, gzip.open(f"models/ev-{name}.dat.gz", "wb"))
+'''
+
+
+# Treinar com 3 clusters (depois de usares o elbow method)
 kmeans = KMeans(n_clusters=3, random_state=42)
 kmeans.fit(X)
 
-joblib.dump(kmeans, "energy_cluster_kmeans.pkl")
+# Guardar em gzip (igual ao exemplo da professora)
+filename = "models/energy-kmeans.dat.gz"
+joblib.dump(kmeans, gzip.open(filename, "wb"))
 
-print("✅ Modelo treinado e guardado como energy_cluster_kmeans.pkl")
-
+print(f"✅ Modelo guardado em {filename}")
 
 
 

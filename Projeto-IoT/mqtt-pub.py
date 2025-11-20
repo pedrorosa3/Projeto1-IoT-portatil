@@ -3,13 +3,13 @@ import json
 import time
 import paho.mqtt.client as mqtt
 
-MQTT_BROKER = "localhost"
+MQTT_BROKER = "mosquitto"
 MQTT_PORT = 8883
 MQTT_TOPIC = "idc/iris"
 
 filename = "../EV-simulation.csv"
 
-df = pd.read_csv(filename)
+df = pd.read_csv(filename,sep=";")
 
 df.columns = [
     "vehicle_model",
