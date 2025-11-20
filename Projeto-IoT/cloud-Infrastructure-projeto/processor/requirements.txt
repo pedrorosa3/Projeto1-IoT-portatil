@@ -2,3 +2,5 @@ paho-mqtt==1.6.1
 pandas
 mysql-connector-python
 joblib
+scikit-learn==1.4.2
+

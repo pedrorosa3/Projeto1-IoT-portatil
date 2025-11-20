@@ -7,9 +7,9 @@ import os
 print("📘 Training KMeans clustering model...")
 
 # Garantir diretoria models
-os.makedirs("models", exist_ok=True)
+os.makedirs("model", exist_ok=True)
 
-df = pd.read_csv("EV-session.csv", sep=";")
+df = pd.read_csv("../EV-session.csv", sep=";")
 
 df.columns = [
     "user_id",
@@ -56,7 +56,7 @@ kmeans = KMeans(n_clusters=3, random_state=42)
 kmeans.fit(X)
 
 # Guardar em gzip (igual ao exemplo da professora)
-filename = "models/energy-kmeans.dat.gz"
+filename = "model/energy-kmeans.dat.gz"
 joblib.dump(kmeans, gzip.open(filename, "wb"))
 
 print(f"✅ Modelo guardado em {filename}")

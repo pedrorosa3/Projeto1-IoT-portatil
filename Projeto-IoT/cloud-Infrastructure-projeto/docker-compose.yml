@@ -10,9 +10,10 @@ services:
       - 1880:1880
     networks:
       idc-net:
-        ipv4_address: 172.100.10.16
+        ipv4_address: 172.100.10.15
     volumes:
       - ./data/node-red-data:/data
+#      - ./data/mosquitto-data/certs:/certs
   mosquitto:
     image: eclipse-mosquitto:latest
     container_name: mosquitto
@@ -27,7 +28,7 @@ services:
       - ./data/mosquitto-data/certs:/mosquitto/certs
     networks:
       idc-net:
-        ipv4_address: 172.100.10.15
+        ipv4_address: 172.100.10.10
   web:
       build: ./data/app-data/
       container_name: app
@@ -80,8 +81,8 @@ services:
     ports:
       - "8888:8888"
     networks:
-      - idc-net:
-          ipv4_address:  172.100.10.11
+      idc-net:
+        ipv4_address:  172.100.10.34
     volumes:
       - ./data:/home
 
