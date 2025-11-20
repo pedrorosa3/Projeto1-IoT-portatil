@@ -8273,3 +8273,6 @@
 1763597903: mosquitto version 2.0.22 running
 1763597904: New connection from 172.100.10.15:56712 on port 8883.
 1763597904: New client connected from 172.100.10.15:56712 as noderedd98f5a42fd124807 (p2, c1, k60, u'localhost').
+1763598514: Client noderedd98f5a42fd124807 disconnected.
+1763598514: mosquitto version 2.0.22 terminating
+1763598514: Saving in-memory database to /mosquitto/data//mosquitto.db.
