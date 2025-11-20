@@ -8267,3 +8267,9 @@
 1763597887: Client nodered053722f0adcf9f69 disconnected.
 1763597887: mosquitto version 2.0.22 terminating
 1763597887: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1763597903: mosquitto version 2.0.22 starting
+1763597903: Config loaded from /mosquitto/config/mosquitto.conf.
+1763597903: Opening ipv4 listen socket on port 8883.
+1763597903: mosquitto version 2.0.22 running
+1763597904: New connection from 172.100.10.15:56712 on port 8883.
+1763597904: New client connected from 172.100.10.15:56712 as noderedd98f5a42fd124807 (p2, c1, k60, u'localhost').
