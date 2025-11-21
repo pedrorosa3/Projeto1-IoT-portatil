@@ -60,6 +60,8 @@ print("✅ PROCESSOR ligado ao MySQL e ao MQTT Broker",flush=True)
 # ========================
 # MQTT CALLBACK
 # ========================
+
+
 def on_message(client, userdata, message):
     payload = json.loads(message.payload.decode("utf-8"))
     print(f"📥 Recebido via MQTT → {payload}")
@@ -111,14 +113,16 @@ print(df_sessions["Vehicle Age (years)"].unique())
 df_sessions["Charging Start Time"] = pd.to_datetime(
     df_sessions["Charging Start Time"], dayfirst=True, errors="coerce"
 )
-
 df_sessions["Charging End Time"] = pd.to_datetime(
     df_sessions["Charging End Time"], dayfirst=True, errors="coerce"
 )
+
 load_users(df_sessions)
 load_sessions(df_sessions)
 db.commit()
 print("✅ Dados offline carregados!",flush=True)
+
+
 
 
 # ========================
@@ -133,10 +137,10 @@ def on_connect(client, userdata, flags, return_code):
     else:
         print("could not connect, return code:", return_code)
 
-
+'''
 def on_message(client, userdata, message):
     print("Received message: " ,str(message.payload.decode("utf-8")),flush=True)
-
+'''
 client = mqtt.Client("Cliente-Processor")
 
 client.tls_set(ca_certs="ca.crt",

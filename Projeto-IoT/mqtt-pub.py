@@ -3,7 +3,7 @@ import json
 import time
 import paho.mqtt.client as mqtt
 
-MQTT_BROKER = "mosquitto"
+MQTT_BROKER = "localhost"
 MQTT_PORT = 8883
 MQTT_TOPIC = "idc/iris"
 

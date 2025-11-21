@@ -216,27 +216,3 @@ def load_sessions(df):
         ))
     db.commit()
     print("📈 Sessões offline carregadas.")
-
-
-# -----------------------------
-# EXECUÇÃO
-# -----------------------------
-if __name__ == "__main__":
-    print("\n=== 🚀 A carregar dados offline... ===")
-
-    load_stations()
-
-    df_sessions = pd.read_csv("EV-session.csv", sep=";")
-    print(df_sessions["Vehicle Model"].unique())
-    df_sessions["Charging Start Time"] = pd.to_datetime(
-        df_sessions["Charging Start Time"], dayfirst=True, errors="coerce"
-    )
-
-    df_sessions["Charging End Time"] = pd.to_datetime(
-        df_sessions["Charging End Time"], dayfirst=True, errors="coerce"
-    )   
-    #df = pd.read_csv("EV-stations.csv", sep=";")
-    load_users(df_sessions)
-    load_sessions(df_sessions)
-
-    print("\n✅ Base de dados carregada com sucesso!")

@@ -13,7 +13,7 @@ def on_message(client, userdata, message):
     print("Received message: " ,str(message.payload.decode("utf-8")))
 
 
-broker_hostname ="mosquitto"
+broker_hostname ="localhost"
 port = 8883 
 
 client = mqtt.Client("Client2")

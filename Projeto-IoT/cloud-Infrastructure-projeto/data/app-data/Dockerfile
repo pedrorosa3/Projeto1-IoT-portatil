@@ -9,6 +9,8 @@ COPY app.py /app
 COPY requirements.txt /app
 COPY model /app/model
 COPY modules /app/modules
+COPY data /app/data
+COPY db.py /app/
 
 # Install dependencies
 RUN pip install -r requirements.txt

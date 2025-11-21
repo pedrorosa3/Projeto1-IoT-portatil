@@ -7,13 +7,21 @@
         "info": ""
     },
     {
+        "id": "83207b460763f17a",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "e3cb3376d18fa82e",
         "type": "tls-config",
         "name": "config-projeto",
-        "cert": "/certs/client.crt",
-        "key": "/certs/client.key",
-        "ca": "/certs/ca.crt",
-        "certname": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "client.crt",
         "keyname": "client.key",
         "caname": "ca.crt",
         "servername": "",
@@ -86,6 +94,179 @@
         "sessionExpiry": ""
     },
     {
+        "id": "d99d65c6c642955f",
+        "type": "ui_tab",
+        "name": "Energy ML",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "de122ab5589cf3c9",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "5a05542a17310871",
+        "type": "ui_group",
+        "name": "Predicitons",
+        "tab": "d99d65c6c642955f",
+        "order": 1,
+        "disp": true,
+        "width": "4",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "de350f5cecaefb2b",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "e06925f39ceecb38",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "de350f5cecaefb2b",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "dcd1fadf7303388b",
+        "type": "ui_tab",
+        "name": "Home12",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "852a61f4fb0ea543",
+        "type": "ui_tab",
+        "name": "Home13",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "4a4591be2fe0e8ba",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "852a61f4fb0ea543",
+        "order": 1,
+        "disp": true,
+        "width": "15",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "0d2cc944d58494f0",
+        "type": "ui_group",
+        "name": "Default1",
+        "tab": "dcd1fadf7303388b",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
         "id": "3cc11d24.ff01a2",
         "type": "comment",
         "z": "f6f2187d.f17ca8",
@@ -100,7 +281,7 @@
         "type": "debug",
         "z": "f6f2187d.f17ca8",
         "name": "debug 1",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -446,5 +627,1140 @@
         "x": 770,
         "y": 680,
         "wires": []
+    },
+    {
+        "id": "870d2364a12225cb",
+        "type": "http request",
+        "z": "f6f2187d.f17ca8",
+        "name": "ML training",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://app:8000/train",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 650,
+        "y": 920,
+        "wires": [
+            [
+                "c491e7ce6577ad0f"
+            ]
+        ]
+    },
+    {
+        "id": "c491e7ce6577ad0f",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "f4f8cd7cfd286dcf",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "Train Model",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"action\": \"train\" }",
+        "payloadType": "json",
+        "x": 370,
+        "y": 900,
+        "wires": [
+            [
+                "870d2364a12225cb"
+            ]
+        ]
+    },
+    {
+        "id": "48bfc48efdced102",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "Predict Energy",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "32",
+        "payloadType": "num",
+        "x": 140,
+        "y": 1020,
+        "wires": [
+            [
+                "d7990263fdc5d475"
+            ]
+        ]
+    },
+    {
+        "id": "d6ebcf4bf3b2d978",
+        "type": "http request",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://app:8000/predict",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 630,
+        "y": 1040,
+        "wires": [
+            [
+                "9a6bf036a252f6ba",
+                "dbc422e9ebe5f53e"
+            ]
+        ]
+    },
+    {
+        "id": "9a6bf036a252f6ba",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1220,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "d7990263fdc5d475",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"energy_consumed\": msg.payload}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 1020,
+        "wires": [
+            [
+                "d6ebcf4bf3b2d978"
+            ]
+        ]
+    },
+    {
+        "id": "3ccc625e42c1fd7e",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "Get Metrics",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "5",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 150,
+        "y": 1180,
+        "wires": [
+            [
+                "43a251a034546807"
+            ]
+        ]
+    },
+    {
+        "id": "43a251a034546807",
+        "type": "http request",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://app:8000/metrics",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 390,
+        "y": 1180,
+        "wires": [
+            [
+                "03e5ce2cd9f67e67",
+                "d334d681707b22c0"
+            ]
+        ]
+    },
+    {
+        "id": "03e5ce2cd9f67e67",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 5",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "f04f00e70ff89053",
+        "type": "ui_gauge",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "group": "5a05542a17310871",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Predicted Energy",
+        "label": "kWh",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "3",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1150,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "dbc422e9ebe5f53e",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 1",
+        "func": "msg.payload = msg.payload.cluster;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 1040,
+        "wires": [
+            [
+                "f04f00e70ff89053",
+                "9a6bf036a252f6ba"
+            ]
+        ]
+    },
+    {
+        "id": "d334d681707b22c0",
+        "type": "ui_text",
+        "z": "f6f2187d.f17ca8",
+        "group": "5a05542a17310871",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 610,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "2a572782a803e36d",
+        "type": "http request",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://app:8000/available-years",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 330,
+        "y": 1460,
+        "wires": [
+            [
+                "81e9c334d03eed28"
+            ]
+        ]
+    },
+    {
+        "id": "81e9c334d03eed28",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 2",
+        "func": "msg.options = msg.payload.years\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 1460,
+        "wires": [
+            [
+                "b117b8c76776fc25"
+            ]
+        ]
+    },
+    {
+        "id": "e929c27328c182cd",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "Train Model",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"action\": \"train\" }",
+        "payloadType": "json",
+        "x": 130,
+        "y": 1460,
+        "wires": [
+            [
+                "2a572782a803e36d"
+            ]
+        ]
+    },
+    {
+        "id": "b117b8c76776fc25",
+        "type": "ui_dropdown",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "5a05542a17310871",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "options": [],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 820,
+        "y": 1460,
+        "wires": [
+            [
+                "cb04e6d63e44a5b6",
+                "167cad903353241b",
+                "8d83a27440f98d89"
+            ]
+        ]
+    },
+    {
+        "id": "cb04e6d63e44a5b6",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1120,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "167cad903353241b",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 4",
+        "func": "const year = msg.payload;\nmsg.method = \"GET\";\nmsg.url = \"http://app:8000/available-months/\" + year;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 980,
+        "y": 1740,
+        "wires": [
+            [
+                "eb3a0ffd2f5ea1aa",
+                "3d6b7f29b4602720"
+            ]
+        ]
+    },
+    {
+        "id": "eb3a0ffd2f5ea1aa",
+        "type": "http request",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1250,
+        "y": 1720,
+        "wires": [
+            [
+                "e58692604827c6c6"
+            ]
+        ]
+    },
+    {
+        "id": "e58692604827c6c6",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 5",
+        "func": "msg.options = msg.payload.months;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1460,
+        "y": 1720,
+        "wires": [
+            [
+                "44199be2216a6653",
+                "70af4ecfe16ea428"
+            ]
+        ]
+    },
+    {
+        "id": "44199be2216a6653",
+        "type": "ui_dropdown",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "e06925f39ceecb38",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "options": [],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 1640,
+        "y": 1700,
+        "wires": [
+            [
+                "0901f52d4e489dca"
+            ]
+        ]
+    },
+    {
+        "id": "3d6b7f29b4602720",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1200,
+        "y": 1840,
+        "wires": []
+    },
+    {
+        "id": "70af4ecfe16ea428",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1840,
+        "y": 1800,
+        "wires": []
+    },
+    {
+        "id": "0901f52d4e489dca",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 3",
+        "func": "const month = msg.payload;\nconst year = flow.get(\"selected_year\");\nmsg.method = \"GET\";\nmsg.url = \"http://app:8000/available-days/\" + year+\"/\"+month;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1760,
+        "y": 2000,
+        "wires": [
+            [
+                "568a6806b5dc2571"
+            ]
+        ]
+    },
+    {
+        "id": "568a6806b5dc2571",
+        "type": "http request",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1950,
+        "y": 1920,
+        "wires": [
+            [
+                "01dcd4c0802d717b"
+            ]
+        ]
+    },
+    {
+        "id": "67efa39e36c14473",
+        "type": "ui_dropdown",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "0d2cc944d58494f0",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "options": [],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 2340,
+        "y": 1880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8d83a27440f98d89",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 6",
+        "func": "flow.set(\"selected_year\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 1340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "01dcd4c0802d717b",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 7",
+        "func": "msg.options = msg.payload.days;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2140,
+        "y": 1900,
+        "wires": [
+            [
+                "67efa39e36c14473"
+            ]
+        ]
+    },
+    {
+        "id": "a948a439fb3b1605",
+        "type": "inject",
+        "z": "83207b460763f17a",
+        "name": "Train Model",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"action\": \"train\" }",
+        "payloadType": "json",
+        "x": 110,
+        "y": 120,
+        "wires": [
+            [
+                "089115d3d75850d5"
+            ]
+        ]
+    },
+    {
+        "id": "ecb30a62f2b5ecbe",
+        "type": "http request",
+        "z": "83207b460763f17a",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 410,
+        "y": 120,
+        "wires": [
+            [
+                "8c56d1eb99c76851"
+            ]
+        ]
+    },
+    {
+        "id": "089115d3d75850d5",
+        "type": "function",
+        "z": "83207b460763f17a",
+        "name": "function 8",
+        "func": "msg.method = \"GET\";\nmsg.url = \"http://app:8000/available-years\"; // ajusta a tua URL\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 120,
+        "wires": [
+            [
+                "ecb30a62f2b5ecbe"
+            ]
+        ]
+    },
+    {
+        "id": "8c56d1eb99c76851",
+        "type": "function",
+        "z": "83207b460763f17a",
+        "name": "function 9",
+        "func": "// espera payload: { \"years\": [2023, 2024, ...] }\nconst years = (msg.payload && msg.payload.years) ? msg.payload.years : [];\nmsg.options = years;\nmsg.ui_control = msg.ui_control || {};\nmsg.ui_control.options = years.map(y => ({ label: String(y), value: y }));\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 120,
+        "wires": [
+            [
+                "00bbe819d1fb6994"
+            ]
+        ]
+    },
+    {
+        "id": "00bbe819d1fb6994",
+        "type": "ui_dropdown",
+        "z": "83207b460763f17a",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "4a4591be2fe0e8ba",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "options": [],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 760,
+        "y": 120,
+        "wires": [
+            [
+                "201ab21e2b2b79a4"
+            ]
+        ]
+    },
+    {
+        "id": "201ab21e2b2b79a4",
+        "type": "function",
+        "z": "83207b460763f17a",
+        "name": "function 10",
+        "func": "const year = msg.payload;\nflow.set(\"selected_year\", year);\n\n// preparar http request para /available-months/<year>\nmsg.method = \"GET\";\nmsg.url = \"http://app:8000/available-months/\" + year;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 120,
+        "wires": [
+            [
+                "32c104b2c501601c"
+            ]
+        ]
+    },
+    {
+        "id": "32c104b2c501601c",
+        "type": "http request",
+        "z": "83207b460763f17a",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1130,
+        "y": 120,
+        "wires": [
+            [
+                "67e532cd9a5951e6"
+            ]
+        ]
+    },
+    {
+        "id": "67e532cd9a5951e6",
+        "type": "function",
+        "z": "83207b460763f17a",
+        "name": "function 11",
+        "func": "const months = (msg.payload && msg.payload.months) ? msg.payload.months : [];\nmsg.options = months;\nmsg.ui_control = msg.ui_control || {};\nmsg.ui_control.options = months.map(m => ({ label: String(m), value: m }));\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1290,
+        "y": 120,
+        "wires": [
+            [
+                "2c32528b93929004"
+            ]
+        ]
+    },
+    {
+        "id": "2c32528b93929004",
+        "type": "ui_dropdown",
+        "z": "83207b460763f17a",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "4a4591be2fe0e8ba",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "options": [],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 1460,
+        "y": 120,
+        "wires": [
+            [
+                "3efa5cbdb3a8df32"
+            ]
+        ]
+    },
+    {
+        "id": "3efa5cbdb3a8df32",
+        "type": "function",
+        "z": "83207b460763f17a",
+        "name": "function 12",
+        "func": "const month = msg.payload;\nflow.set(\"selected_month\", month);\n\nconst year = flow.get(\"selected_year\");\nmsg.method = \"GET\";\nmsg.url = `http://app:8000/available-days/${year}/${month}`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1610,
+        "y": 120,
+        "wires": [
+            [
+                "8cec13101e2347e4"
+            ]
+        ]
+    },
+    {
+        "id": "8cec13101e2347e4",
+        "type": "http request",
+        "z": "83207b460763f17a",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1790,
+        "y": 120,
+        "wires": [
+            [
+                "6bb297072eac5263"
+            ]
+        ]
+    },
+    {
+        "id": "6bb297072eac5263",
+        "type": "function",
+        "z": "83207b460763f17a",
+        "name": "function 13",
+        "func": "const days = (msg.payload && msg.payload.days) ? msg.payload.days : [];\nmsg.options = days;\nmsg.ui_control = msg.ui_control || {};\nmsg.ui_control.options = days.map(d => ({ label: String(d), value: d }));\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1950,
+        "y": 120,
+        "wires": [
+            [
+                "aa7a1a331c993949"
+            ]
+        ]
+    },
+    {
+        "id": "aa7a1a331c993949",
+        "type": "ui_dropdown",
+        "z": "83207b460763f17a",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "4a4591be2fe0e8ba",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "options": [],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 2100,
+        "y": 120,
+        "wires": [
+            [
+                "4468d961cce16b48"
+            ]
+        ]
+    },
+    {
+        "id": "297f511131c7b1a6",
+        "type": "ui_button",
+        "z": "83207b460763f17a",
+        "name": "",
+        "group": "4a4591be2fe0e8ba",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "button",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 430,
+        "y": 200,
+        "wires": [
+            [
+                "fa369d25ae7516fb"
+            ]
+        ]
+    },
+    {
+        "id": "fa369d25ae7516fb",
+        "type": "function",
+        "z": "83207b460763f17a",
+        "name": "function 14",
+        "func": "const year = flow.get(\"selected_year\");\nconst month = flow.get(\"selected_month\");\nconst day = flow.get(\"selected_day\"); // vamos setar isto no onDaySelected\n\nif (!year) {\n    node.error(\"Selecciona um ano antes de carregar as estatísticas\");\n    return null;\n}\n\nlet url = null;\nif (year && !month) {\n    // somente ano\n    url = `http://app:8000/stats/year/${year}`;\n} else if (year && month && !day) {\n    // ano + mês\n    url = `http://app:8000/stats/month/${year}/${month}`;\n} else if (year && month && day) {\n    // ano + mês + dia\n    url = `http://app:8000/stats/day/${year}/${month}/${day}`;\n} else {\n    // caso improvável — default para ano\n    url = `http://app:8000/stats/year/${year}`;\n}\n\nmsg.method = \"GET\";\nmsg.url = url;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 200,
+        "wires": [
+            [
+                "32ec0eeba8db56bd"
+            ]
+        ]
+    },
+    {
+        "id": "4468d961cce16b48",
+        "type": "function",
+        "z": "83207b460763f17a",
+        "name": "function 15",
+        "func": "const day = msg.payload;\nflow.set(\"selected_day\", day);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2270,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "32ec0eeba8db56bd",
+        "type": "http request",
+        "z": "83207b460763f17a",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 830,
+        "y": 200,
+        "wires": [
+            [
+                "0371cd5be83e7850"
+            ]
+        ]
+    },
+    {
+        "id": "0371cd5be83e7850",
+        "type": "function",
+        "z": "83207b460763f17a",
+        "name": "function 16",
+        "func": "// msg.payload já é o object {sessions, total_energy, ...}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1030,
+        "y": 200,
+        "wires": [
+            [
+                "4e191984befbe59e"
+            ]
+        ]
+    },
+    {
+        "id": "4e191984befbe59e",
+        "type": "ui_template",
+        "z": "83207b460763f17a",
+        "group": "4a4591be2fe0e8ba",
+        "name": "",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "format": "<div style=\"display:flex; gap:12px; flex-wrap:wrap;\">\n    <div style=\"padding:12px; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,0.15); min-width:150px;\">\n        <div style=\"font-size:12px;color:#666\">Sessions</div>\n        <div id=\"sessions\" style=\"font-size:20px; font-weight:600;\">-</div>\n    </div>\n    <div style=\"padding:12px; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,0.15); min-width:150px;\">\n        <div style=\"font-size:12px;color:#666\">Total Energy (kWh)</div>\n        <div id=\"total_energy\" style=\"font-size:20px; font-weight:600;\">-</div>\n    </div>\n    <div style=\"padding:12px; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,0.15); min-width:150px;\">\n        <div style=\"font-size:12px;color:#666\">Avg Energy (kWh)</div>\n        <div id=\"avg_energy\" style=\"font-size:20px; font-weight:600;\">-</div>\n    </div>\n    <div style=\"padding:12px; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,0.15); min-width:150px;\">\n        <div style=\"font-size:12px;color:#666\">Total Cost</div>\n        <div id=\"total_cost\" style=\"font-size:20px; font-weight:600;\">-</div>\n    </div>\n    <div style=\"padding:12px; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,0.15); min-width:150px;\">\n        <div style=\"font-size:12px;color:#666\">Avg Cost</div>\n        <div id=\"avg_cost\" style=\"font-size:20px; font-weight:600;\">-</div>\n    </div>\n</div>\n\n<script>\n    (function(scope){\n  scope.$watch('msg', function(msg){\n    if(!msg || !msg.payload) return;\n    const p = msg.payload;\n    document.getElementById(\"sessions\").innerText = p.sessions ?? 0;\n    document.getElementById(\"total_energy\").innerText = p.total_energy ?? 0;\n    document.getElementById(\"avg_energy\").innerText = p.avg_energy ?? 0;\n    document.getElementById(\"total_cost\").innerText = p.total_cost ?? 0;\n    document.getElementById(\"avg_cost\").innerText = p.avg_cost ?? 0;\n  });\n})(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1220,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9817d128cee68bfd",
+        "type": "ui_button",
+        "z": "83207b460763f17a",
+        "name": "",
+        "group": "4a4591be2fe0e8ba",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Reset",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 170,
+        "y": 320,
+        "wires": [
+            [
+                "4f932d5477d2af10"
+            ]
+        ]
+    },
+    {
+        "id": "4f932d5477d2af10",
+        "type": "function",
+        "z": "83207b460763f17a",
+        "name": "function 17",
+        "func": "// limpar memória\nflow.set(\"selected_year\", null);\nflow.set(\"selected_month\", null);\nflow.set(\"selected_day\", null);\n\n// 1) limpar dropdown YEAR\nnode.send({\n    _dropdown: \"year\",\n    options: [],\n    payload: \"\"\n});\n\n// 2) limpar dropdown MONTH\nnode.send({\n    _dropdown: \"month\",\n    options: [],\n    payload: \"\"\n});\n\n// 3) limpar dropdown DAY\nnode.send({\n    _dropdown: \"day\",\n    options: [],\n    payload: \"\"\n});\n\n// 4) limpar tabela\nnode.send({\n    _dropdown: \"table\",\n    payload: []\n});\n\n// 5) pedir nova lista de anos\nreturn { reset: true };",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 400,
+        "wires": [
+            [
+                "00bbe819d1fb6994",
+                "4e191984befbe59e",
+                "2c32528b93929004",
+                "aa7a1a331c993949",
+                "089115d3d75850d5"
+            ]
+        ]
     }
 ]
