@@ -22,7 +22,7 @@ from flask import Flask, jsonify
 from db import get_connection
 
 
-def get_stats_day(cursor, year, month, day):
+def get_stats_day(cursor, year, month, week, day):
     cursor.execute("""
         SELECT 
             COUNT(*) AS sessions,
@@ -33,8 +33,9 @@ def get_stats_day(cursor, year, month, day):
         FROM sessions
         WHERE YEAR(start_time) = %s
         AND MONTH(start_time) = %s
+        AND WEEK(start_time, 3) = %s
         AND DAY(start_time) = %s
-    """, (year, month, day))
+    """, (year, month, week, day))
     row = cursor.fetchone()
     return row
 
@@ -105,6 +106,57 @@ def health():
     """Return service health"""
     return 'ok'
 
+
+@app.get("/stats/range")
+def stats_range():
+    start = request.args.get("start")
+    end = request.args.get("end")
+    start_hour = request.args.get("startHour")
+    end_hour = request.args.get("endHour")
+
+    if not start or not end:
+        return jsonify({"error": "Missing start or end date"}), 400
+
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    # ----------------------------------------
+    # 1) Construir WHERE base (datas)
+    # ----------------------------------------
+    where = "DATE(start_time) BETWEEN %s AND %s"
+    params = [start, end]
+
+    # ----------------------------------------
+    # 2) Se vierem HORAS → acrescentar ao WHERE
+    # ----------------------------------------
+    if start_hour and end_hour:
+        where += " AND TIME(start_time) BETWEEN %s AND %s"
+        params.append(start_hour)
+        params.append(end_hour)
+
+    # ----------------------------------------
+    # 3) Executar a query
+    # ----------------------------------------
+    cursor.execute(f"""
+        SELECT 
+            COUNT(*) AS sessions,
+            SUM(energy_kwh) AS total_energy,
+            AVG(energy_kwh) AS avg_energy,
+            SUM(duration_h) AS total_duration,
+            AVG(duration_h) AS avg_duration,
+            SUM(estimated_cost) AS total_cost,
+            AVG(estimated_cost) AS avg_cost
+        FROM sessions
+        WHERE {where}
+    """, params)
+
+    row = cursor.fetchone()
+    cursor.close()
+    conn.close()
+
+    return jsonify(row_to_json(row, cursor))
+
+
 @app.get("/stats/year/<int:year>")
 def stats_year(year):
     conn = get_connection()
@@ -124,11 +176,37 @@ def stats_month(year, month):
     conn.close()
     return jsonify(row_to_json(row, cursor))
 
-@app.get("/stats/day/<int:year>/<int:month>/<int:day>")
-def stats_day(year, month, day):
+@app.get("/stats/week/<int:year>/<int:month>/<int:week>")
+def stats_week(year, month, week):
     conn = get_connection()
     cursor = conn.cursor()
-    row = get_stats_day(cursor, year, month, day)
+
+    cursor.execute("""
+        SELECT 
+            COUNT(*) AS sessions,
+            SUM(energy_kwh) AS total_energy,
+            AVG(energy_kwh) AS avg_energy,
+            SUM(estimated_cost) AS total_cost,
+            AVG(estimated_cost) AS avg_cost
+        FROM sessions
+        WHERE YEAR(start_time) = %s
+            AND MONTH(start_time) = %s
+            AND WEEK(start_time, 3) = %s
+    """, (year, month, week))
+
+    row = cursor.fetchone()
+
+    cursor.close()
+    conn.close()
+
+    return jsonify(row_to_json(row, cursor))
+
+
+@app.get("/stats/day/<int:year>/<int:month>/<int:week>/<int:day>")
+def stats_day(year, month, week, day):
+    conn = get_connection()
+    cursor = conn.cursor()
+    row = get_stats_day(cursor, year, month, week, day)
     cursor.close()
     conn.close()
     return jsonify(row_to_json(row, cursor))
@@ -181,11 +259,31 @@ def available_months(year):
     return jsonify({"months": months})
 
 
+@app.get("/available-weeks/<int:year>/<int:month>")
+def available_weeks(year, month):
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        SELECT DISTINCT WEEK(start_time, 3) AS week
+        FROM sessions
+        WHERE YEAR(start_time) = %s
+        AND MONTH(start_time) = %s
+        ORDER BY week ASC;
+    """, (year, month))
+
+    weeks = [row[0] for row in cursor.fetchall()]
+
+    cursor.close()
+    conn.close()
+
+    return jsonify({"weeks": weeks})
+
 # -----------------------------------------------------------
 # 3) Available DAYS for a given year + month
 # -----------------------------------------------------------
-@app.get("/available-days/<int:year>/<int:month>")
-def available_days(year, month):
+@app.get("/available-days/<int:year>/<int:month>/<int:week>")
+def available_days(year, month, week):
     conn = get_connection()
     cursor = conn.cursor()
 
@@ -194,19 +292,120 @@ def available_days(year, month):
         FROM sessions
         WHERE YEAR(start_time) = %s
         AND MONTH(start_time) = %s
+        AND WEEK(start_time, 3) = %s
         ORDER BY day ASC
-    """, (year, month))
+    """, (year, month, week))
 
     days = [row[0] for row in cursor.fetchall()]
+
+    
 
     cursor.close()
     conn.close()
 
     return jsonify({"days": days})
 
+@app.get("/trends/daily/<int:year>/<int:month>")
+def available_days_trends(year, month):
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        SELECT 
+            DAY(start_time) AS day,
+            COUNT(*) AS sessions
+        FROM sessions
+        WHERE YEAR(start_time) = %s
+            AND MONTH(start_time) = %s
+        GROUP BY DAY(start_time)
+        ORDER BY day ASC;
+    """, (year, month))
+
+    result = [
+        {"day": row[0], "sessions": row[1]}
+        for row in cursor.fetchall()
+    ]
+
+    cursor.close()
+    conn.close()
+
+    return jsonify(result)
+
+@app.get("/trends/weekly/<int:year>/<int:month>")
+def available_weeks_trends(year, month):
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        SELECT
+            WEEK(start_time, 3) AS week,  -- modo 3 = ISO week (segunda-feira)
+            COUNT(*) AS sessions
+        FROM sessions
+        WHERE YEAR(start_time) = %s
+            AND MONTH(start_time) = %s
+        GROUP BY WEEK(start_time, 3)
+        ORDER BY week ASC;
+    """, (year, month))
+
+    result = [
+        {"week": row[0], "sessions": row[1]}
+        for row in cursor.fetchall()
+    ]
+
+    cursor.close()
+    conn.close()
+
+    return jsonify(result)
+
+@app.get("/trends/monthly/<int:year>")
+def available_months_trends(year):
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        SELECT
+            DISTINCT MONTH(start_time) AS month,
+            COUNT(*) AS sessions
+        FROM sessions
+        WHERE YEAR(start_time) = %s
+        GROUP BY MONTH(start_time)
+        ORDER BY month ASC;
+    """, (year,))
+
+    result = [
+        {"month": row[0], "sessions": row[1]}
+        for row in cursor.fetchall()
+    ]
+
+    cursor.close()
+    conn.close()
+
+    return jsonify(result)
 
 
+@app.get("/stats/time-of-day")
+def stats_time_of_day():
+    conn = get_connection()
+    cursor = conn.cursor()
 
+    cursor.execute("""
+        SELECT 
+            time_of_day,
+            COUNT(*) AS sessions
+        FROM sessions
+        GROUP BY time_of_day
+        ORDER BY sessions DESC;
+    """)
+
+    result = [
+        {"period": row[0], "sessions": row[1]}
+        for row in cursor.fetchall()
+    ]
+
+    cursor.close()
+    conn.close()
+
+    return jsonify(result)
 
 @app.route('/train', methods=['POST'])
 def train():
