@@ -39,6 +39,14 @@
         "env": []
     },
     {
+        "id": "70b07c017b1138b9",
+        "type": "tab",
+        "label": "Flow 6",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "e3cb3376d18fa82e",
         "type": "tls-config",
         "name": "config-projeto",
@@ -231,6 +239,29 @@
         "hidden": false
     },
     {
+        "id": "trend_tab",
+        "type": "ui_tab",
+        "name": "Trends",
+        "icon": "chart-line",
+        "order": 3
+    },
+    {
+        "id": "010ab669a1db13c5",
+        "type": "ui_tab",
+        "name": "Time of day Consume",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "7ecb63cd5c48445d",
+        "type": "ui_tab",
+        "name": "AlineaD",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
         "id": "5a05542a17310871",
         "type": "ui_group",
         "name": "Predicitons",
@@ -251,13 +282,6 @@
         "width": "15",
         "collapse": false,
         "className": ""
-    },
-    {
-        "id": "trend_tab",
-        "type": "ui_tab",
-        "name": "Trends",
-        "icon": "chart-line",
-        "order": 3
     },
     {
         "id": "trend_group",
@@ -281,14 +305,6 @@
         "className": ""
     },
     {
-        "id": "010ab669a1db13c5",
-        "type": "ui_tab",
-        "name": "Time of day Consume",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
-    },
-    {
         "id": "1be32628c751f6bc",
         "type": "ui_group",
         "name": "Time of Day Consume",
@@ -300,18 +316,29 @@
         "className": ""
     },
     {
-        "id": "7ecb63cd5c48445d",
-        "type": "ui_tab",
+        "id": "aba46986b29bad39",
+        "type": "ui_group",
         "name": "AlineaD",
+        "tab": "7ecb63cd5c48445d",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9ffae196244da974",
+        "type": "ui_tab",
+        "name": "Alinea E",
         "icon": "dashboard",
         "disabled": false,
         "hidden": false
     },
     {
-        "id": "aba46986b29bad39",
+        "id": "dcc319e4acc497c0",
         "type": "ui_group",
-        "name": "AlineaD",
-        "tab": "7ecb63cd5c48445d",
+        "name": "Alinea E",
+        "tab": "9ffae196244da974",
         "order": 1,
         "disp": true,
         "width": 6,
@@ -1310,164 +1337,6 @@
         ]
     },
     {
-        "id": "297f511131c7b1a6",
-        "type": "ui_button",
-        "z": "83207b460763f17a",
-        "name": "",
-        "group": "4a4591be2fe0e8ba",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "button",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 430,
-        "y": 200,
-        "wires": [
-            [
-                "fa369d25ae7516fb"
-            ]
-        ]
-    },
-    {
-        "id": "9817d128cee68bfd",
-        "type": "ui_button",
-        "z": "83207b460763f17a",
-        "name": "",
-        "group": "4a4591be2fe0e8ba",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Reset",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 170,
-        "y": 320,
-        "wires": [
-            [
-                "4f932d5477d2af10"
-            ]
-        ]
-    },
-    {
-        "id": "00bbe819d1fb6994",
-        "type": "ui_dropdown",
-        "z": "83207b460763f17a",
-        "name": "",
-        "label": "",
-        "tooltip": "",
-        "place": "Select Year",
-        "group": "4a4591be2fe0e8ba",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "multiple": false,
-        "options": [],
-        "payload": "",
-        "topic": "topic",
-        "topicType": "msg",
-        "className": "",
-        "x": 760,
-        "y": 120,
-        "wires": [
-            [
-                "201ab21e2b2b79a4"
-            ]
-        ]
-    },
-    {
-        "id": "2c32528b93929004",
-        "type": "ui_dropdown",
-        "z": "83207b460763f17a",
-        "name": "",
-        "label": "",
-        "tooltip": "",
-        "place": "Select Month",
-        "group": "4a4591be2fe0e8ba",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "multiple": false,
-        "options": [],
-        "payload": "",
-        "topic": "topic",
-        "topicType": "msg",
-        "className": "",
-        "x": 1460,
-        "y": 120,
-        "wires": [
-            [
-                "3efa5cbdb3a8df32"
-            ]
-        ]
-    },
-    {
-        "id": "aa7a1a331c993949",
-        "type": "ui_dropdown",
-        "z": "83207b460763f17a",
-        "name": "",
-        "label": "",
-        "tooltip": "",
-        "place": "Select Day",
-        "group": "4a4591be2fe0e8ba",
-        "order": 7,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "multiple": false,
-        "options": [],
-        "payload": "",
-        "topic": "topic",
-        "topicType": "msg",
-        "className": "",
-        "x": 2540,
-        "y": 120,
-        "wires": [
-            [
-                "4468d961cce16b48"
-            ]
-        ]
-    },
-    {
-        "id": "4e191984befbe59e",
-        "type": "ui_template",
-        "z": "83207b460763f17a",
-        "group": "4a4591be2fe0e8ba",
-        "name": "",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "format": "<div style=\"display:flex; gap:12px; flex-wrap:wrap;\">\n    <div style=\"padding:12px; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,0.15); min-width:150px;\">\n        <div style=\"font-size:12px;color:#666\">Sessions</div>\n        <div id=\"sessions\" style=\"font-size:20px; font-weight:600;\">-</div>\n    </div>\n    <div style=\"padding:12px; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,0.15); min-width:150px;\">\n        <div style=\"font-size:12px;color:#666\">Total Energy (kWh)</div>\n        <div id=\"total_energy\" style=\"font-size:20px; font-weight:600;\">-</div>\n    </div>\n    <div style=\"padding:12px; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,0.15); min-width:150px;\">\n        <div style=\"font-size:12px;color:#666\">Avg Energy (kWh)</div>\n        <div id=\"avg_energy\" style=\"font-size:20px; font-weight:600;\">-</div>\n    </div>\n    <div style=\"padding:12px; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,0.15); min-width:150px;\">\n        <div style=\"font-size:12px;color:#666\">Total Cost</div>\n        <div id=\"total_cost\" style=\"font-size:20px; font-weight:600;\">-</div>\n    </div>\n    <div style=\"padding:12px; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,0.15); min-width:150px;\">\n        <div style=\"font-size:12px;color:#666\">Avg Cost</div>\n        <div id=\"avg_cost\" style=\"font-size:20px; font-weight:600;\">-</div>\n    </div>\n</div>\n\n<script>\n    (function(scope){\n  scope.$watch('msg', function(msg){\n    if(!msg || !msg.payload) return;\n    const p = msg.payload;\n    document.getElementById(\"sessions\").innerText = p.sessions ?? 0;\n    document.getElementById(\"total_energy\").innerText = p.total_energy ?? 0;\n    document.getElementById(\"avg_energy\").innerText = p.avg_energy ?? 0;\n    document.getElementById(\"total_cost\").innerText = p.total_cost ?? 0;\n    document.getElementById(\"avg_cost\").innerText = p.avg_cost ?? 0;\n  });\n})(scope);\n</script>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 1220,
-        "y": 200,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "3a2e3fe16f8f192d",
         "type": "http request",
         "z": "83207b460763f17a",
@@ -1512,33 +1381,6 @@
         ]
     },
     {
-        "id": "500eae5515d6dd16",
-        "type": "ui_dropdown",
-        "z": "83207b460763f17a",
-        "name": "",
-        "label": "",
-        "tooltip": "",
-        "place": "Select Week",
-        "group": "4a4591be2fe0e8ba",
-        "order": 6,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "multiple": false,
-        "options": [],
-        "payload": "",
-        "topic": "topic",
-        "topicType": "msg",
-        "className": "",
-        "x": 2000,
-        "y": 20,
-        "wires": [
-            [
-                "64c152bb74282df6"
-            ]
-        ]
-    },
-    {
         "id": "64c152bb74282df6",
         "type": "function",
         "z": "83207b460763f17a",
@@ -1559,116 +1401,188 @@
         ]
     },
     {
-        "id": "dropdown_year",
-        "type": "ui_dropdown",
-        "z": "72dd230c6f0066f6",
-        "name": "Year",
-        "label": "Year",
-        "tooltip": "",
-        "place": "",
-        "group": "trend_group",
-        "width": "6",
-        "height": "",
+        "id": "297f511131c7b1a6",
+        "type": "ui_button",
+        "z": "83207b460763f17a",
+        "name": "",
+        "group": "4a4591be2fe0e8ba",
+        "order": 6,
+        "width": 0,
+        "height": 0,
         "passthru": false,
-        "multiple": false,
-        "options": [],
-        "payload": "",
-        "topic": "year",
-        "topicType": "str",
+        "label": "button",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
         "className": "",
-        "x": 210,
-        "y": 360,
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 430,
+        "y": 200,
         "wires": [
             [
-                "update_year"
+                "fa369d25ae7516fb"
             ]
         ]
     },
     {
-        "id": "dropdown_month",
-        "type": "ui_dropdown",
-        "z": "72dd230c6f0066f6",
-        "name": "Month",
-        "label": "Month",
-        "tooltip": "",
-        "place": "",
-        "group": "trend_group",
-        "width": "6",
-        "height": "",
+        "id": "9817d128cee68bfd",
+        "type": "ui_button",
+        "z": "83207b460763f17a",
+        "name": "",
+        "group": "4a4591be2fe0e8ba",
+        "order": 7,
+        "width": 0,
+        "height": 0,
         "passthru": false,
-        "multiple": false,
-        "options": [
-            {
-                "label": "1",
-                "value": "1",
-                "type": "str"
-            },
-            {
-                "label": "2",
-                "value": "2",
-                "type": "str"
-            },
-            {
-                "label": "3",
-                "value": "3",
-                "type": "str"
-            },
-            {
-                "label": "4",
-                "value": "4",
-                "type": "str"
-            },
-            {
-                "label": "5",
-                "value": "5",
-                "type": "str"
-            },
-            {
-                "label": "6",
-                "value": "6",
-                "type": "str"
-            },
-            {
-                "label": "7",
-                "value": "7",
-                "type": "str"
-            },
-            {
-                "label": "8",
-                "value": "8",
-                "type": "str"
-            },
-            {
-                "label": "9",
-                "value": "9",
-                "type": "str"
-            },
-            {
-                "label": "10",
-                "value": "10",
-                "type": "str"
-            },
-            {
-                "label": "11",
-                "value": "11",
-                "type": "str"
-            },
-            {
-                "label": "12",
-                "value": "12",
-                "type": "str"
-            }
-        ],
-        "payload": "",
-        "topic": "month",
-        "topicType": "str",
+        "label": "Reset",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
         "className": "",
-        "x": 470,
-        "y": 500,
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 170,
+        "y": 320,
         "wires": [
             [
-                "update_month"
+                "4f932d5477d2af10"
             ]
+        ]
+    },
+    {
+        "id": "00bbe819d1fb6994",
+        "type": "ui_dropdown",
+        "z": "83207b460763f17a",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "place": "Select Year",
+        "group": "4a4591be2fe0e8ba",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "options": [],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 760,
+        "y": 120,
+        "wires": [
+            [
+                "201ab21e2b2b79a4"
+            ]
+        ]
+    },
+    {
+        "id": "2c32528b93929004",
+        "type": "ui_dropdown",
+        "z": "83207b460763f17a",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "place": "Select Month",
+        "group": "4a4591be2fe0e8ba",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "options": [],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 1460,
+        "y": 120,
+        "wires": [
+            [
+                "3efa5cbdb3a8df32"
+            ]
+        ]
+    },
+    {
+        "id": "aa7a1a331c993949",
+        "type": "ui_dropdown",
+        "z": "83207b460763f17a",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "place": "Select Day",
+        "group": "4a4591be2fe0e8ba",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "options": [],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 2540,
+        "y": 120,
+        "wires": [
+            [
+                "4468d961cce16b48"
+            ]
+        ]
+    },
+    {
+        "id": "500eae5515d6dd16",
+        "type": "ui_dropdown",
+        "z": "83207b460763f17a",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "place": "Select Week",
+        "group": "4a4591be2fe0e8ba",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "options": [],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 2000,
+        "y": 20,
+        "wires": [
+            [
+                "64c152bb74282df6"
+            ]
+        ]
+    },
+    {
+        "id": "4e191984befbe59e",
+        "type": "ui_template",
+        "z": "83207b460763f17a",
+        "group": "4a4591be2fe0e8ba",
+        "name": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "<div style=\"display:flex; gap:12px; flex-wrap:wrap;\">\n    <div style=\"padding:12px; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,0.15); min-width:150px;\">\n        <div style=\"font-size:12px;color:#666\">Sessions</div>\n        <div id=\"sessions\" style=\"font-size:20px; font-weight:600;\">-</div>\n    </div>\n    <div style=\"padding:12px; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,0.15); min-width:150px;\">\n        <div style=\"font-size:12px;color:#666\">Total Energy (kWh)</div>\n        <div id=\"total_energy\" style=\"font-size:20px; font-weight:600;\">-</div>\n    </div>\n    <div style=\"padding:12px; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,0.15); min-width:150px;\">\n        <div style=\"font-size:12px;color:#666\">Avg Energy (kWh)</div>\n        <div id=\"avg_energy\" style=\"font-size:20px; font-weight:600;\">-</div>\n    </div>\n    <div style=\"padding:12px; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,0.15); min-width:150px;\">\n        <div style=\"font-size:12px;color:#666\">Total Cost</div>\n        <div id=\"total_cost\" style=\"font-size:20px; font-weight:600;\">-</div>\n    </div>\n    <div style=\"padding:12px; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,0.15); min-width:150px;\">\n        <div style=\"font-size:12px;color:#666\">Avg Cost</div>\n        <div id=\"avg_cost\" style=\"font-size:20px; font-weight:600;\">-</div>\n    </div>\n</div>\n\n<script>\n    (function(scope){\n  scope.$watch('msg', function(msg){\n    if(!msg || !msg.payload) return;\n    const p = msg.payload;\n    document.getElementById(\"sessions\").innerText = p.sessions ?? 0;\n    document.getElementById(\"total_energy\").innerText = p.total_energy ?? 0;\n    document.getElementById(\"avg_energy\").innerText = p.avg_energy ?? 0;\n    document.getElementById(\"total_cost\").innerText = p.total_cost ?? 0;\n    document.getElementById(\"avg_cost\").innerText = p.avg_cost ?? 0;\n  });\n})(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1220,
+        "y": 200,
+        "wires": [
+            []
         ]
     },
     {
@@ -1950,6 +1864,207 @@
         ]
     },
     {
+        "id": "25688acc02037c84",
+        "type": "http request",
+        "z": "72dd230c6f0066f6",
+        "name": "GET Trends2",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 830,
+        "y": 360,
+        "wires": [
+            [
+                "route_trends"
+            ]
+        ]
+    },
+    {
+        "id": "8586141c0d6ce14d",
+        "type": "http request",
+        "z": "72dd230c6f0066f6",
+        "name": "GET Trends",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 850,
+        "y": 440,
+        "wires": [
+            [
+                "route_trends"
+            ]
+        ]
+    },
+    {
+        "id": "04a879f166fc0fd6",
+        "type": "function",
+        "z": "72dd230c6f0066f6",
+        "name": "Build URLs-weekly",
+        "func": "let year = flow.get('trend_year');\nlet month = flow.get('trend_month');\n\n\nif (year && month) {\n    msg.topic= 'weekly'\n    msg.url = `http://app:8000/trends/weekly/${year}/${month}`\n}\n\nmsg.method = \"GET\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 360,
+        "wires": [
+            [
+                "25688acc02037c84"
+            ]
+        ]
+    },
+    {
+        "id": "0e4e251ab8fbaa54",
+        "type": "function",
+        "z": "72dd230c6f0066f6",
+        "name": "Build URLs-monthly",
+        "func": "let year = flow.get('trend_year');\nlet month = flow.get('trend_month');\n\nif (year) {\n    msg.topic = \"monthly\"\n    msg.url = \"http://app:8000/trends/monthly/\" + year\n}\nmsg.method = \"GET\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 420,
+        "wires": [
+            [
+                "8586141c0d6ce14d"
+            ]
+        ]
+    },
+    {
+        "id": "dropdown_year",
+        "type": "ui_dropdown",
+        "z": "72dd230c6f0066f6",
+        "name": "Year",
+        "label": "Year",
+        "tooltip": "",
+        "place": "",
+        "group": "trend_group",
+        "width": "6",
+        "height": "",
+        "passthru": false,
+        "multiple": false,
+        "options": [],
+        "payload": "",
+        "topic": "year",
+        "topicType": "str",
+        "className": "",
+        "x": 210,
+        "y": 360,
+        "wires": [
+            [
+                "update_year"
+            ]
+        ]
+    },
+    {
+        "id": "dropdown_month",
+        "type": "ui_dropdown",
+        "z": "72dd230c6f0066f6",
+        "name": "Month",
+        "label": "Month",
+        "tooltip": "",
+        "place": "",
+        "group": "trend_group",
+        "width": "6",
+        "height": "",
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "1",
+                "value": "1",
+                "type": "str"
+            },
+            {
+                "label": "2",
+                "value": "2",
+                "type": "str"
+            },
+            {
+                "label": "3",
+                "value": "3",
+                "type": "str"
+            },
+            {
+                "label": "4",
+                "value": "4",
+                "type": "str"
+            },
+            {
+                "label": "5",
+                "value": "5",
+                "type": "str"
+            },
+            {
+                "label": "6",
+                "value": "6",
+                "type": "str"
+            },
+            {
+                "label": "7",
+                "value": "7",
+                "type": "str"
+            },
+            {
+                "label": "8",
+                "value": "8",
+                "type": "str"
+            },
+            {
+                "label": "9",
+                "value": "9",
+                "type": "str"
+            },
+            {
+                "label": "10",
+                "value": "10",
+                "type": "str"
+            },
+            {
+                "label": "11",
+                "value": "11",
+                "type": "str"
+            },
+            {
+                "label": "12",
+                "value": "12",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "month",
+        "topicType": "str",
+        "className": "",
+        "x": 470,
+        "y": 500,
+        "wires": [
+            [
+                "update_month"
+            ]
+        ]
+    },
+    {
         "id": "bf5e021fb83a01a2",
         "type": "ui_chart",
         "z": "72dd230c6f0066f6",
@@ -2082,94 +2197,6 @@
         ]
     },
     {
-        "id": "25688acc02037c84",
-        "type": "http request",
-        "z": "72dd230c6f0066f6",
-        "name": "GET Trends2",
-        "method": "use",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 830,
-        "y": 360,
-        "wires": [
-            [
-                "route_trends"
-            ]
-        ]
-    },
-    {
-        "id": "8586141c0d6ce14d",
-        "type": "http request",
-        "z": "72dd230c6f0066f6",
-        "name": "GET Trends",
-        "method": "use",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 850,
-        "y": 440,
-        "wires": [
-            [
-                "route_trends"
-            ]
-        ]
-    },
-    {
-        "id": "04a879f166fc0fd6",
-        "type": "function",
-        "z": "72dd230c6f0066f6",
-        "name": "Build URLs-weekly",
-        "func": "let year = flow.get('trend_year');\nlet month = flow.get('trend_month');\n\n\nif (year && month) {\n    msg.topic= 'weekly'\n    msg.url = `http://app:8000/trends/weekly/${year}/${month}`\n}\n\nmsg.method = \"GET\";\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 650,
-        "y": 360,
-        "wires": [
-            [
-                "25688acc02037c84"
-            ]
-        ]
-    },
-    {
-        "id": "0e4e251ab8fbaa54",
-        "type": "function",
-        "z": "72dd230c6f0066f6",
-        "name": "Build URLs-monthly",
-        "func": "let year = flow.get('trend_year');\nlet month = flow.get('trend_month');\n\nif (year) {\n    msg.topic = \"monthly\"\n    msg.url = \"http://app:8000/trends/monthly/\" + year\n}\nmsg.method = \"GET\";\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 660,
-        "y": 420,
-        "wires": [
-            [
-                "8586141c0d6ce14d"
-            ]
-        ]
-    },
-    {
         "id": "da275b2615d3805c",
         "type": "inject",
         "z": "ccfd8bc0f3c88aac",
@@ -2298,8 +2325,7 @@
         "y": 240,
         "wires": [
             [
-                "6cc9eb882f23e1b8",
-                "dd73870283eee7e6"
+                "6cc9eb882f23e1b8"
             ]
         ]
     },
@@ -2323,8 +2349,7 @@
         "y": 240,
         "wires": [
             [
-                "500c7589170753f0",
-                "f2f68b5377e4f89e"
+                "500c7589170753f0"
             ]
         ]
     },
@@ -2347,87 +2372,6 @@
                 "58a6266feeed148f"
             ]
         ]
-    },
-    {
-        "id": "58a6266feeed148f",
-        "type": "ui_template",
-        "z": "8968d1b7f6f46c10",
-        "group": "aba46986b29bad39",
-        "name": "",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "format": "<div style=\"display:flex; gap:12px; flex-wrap:wrap;\">\n    <div style=\"padding:12px; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,0.15); min-width:150px;\">\n        <div style=\"font-size:12px;color:#666\">Total Charging Time(hours)</div>\n        <div id=\"total_time\" style=\"font-size:20px; font-weight:600;\">-</div>\n    </div>\n    <div style=\"padding:12px; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,0.15); min-width:150px;\">\n        <div style=\"font-size:12px;color:#666\">Average Charging Time(hours)</div>\n        <div id=\"avg_time\" style=\"font-size:20px; font-weight:600;\">-</div>\n    </div>\n</div>\n\n<script>\n    (function(scope){\n  scope.$watch('msg', function(msg){\n    if(!msg || !msg.payload) return;\n    const p = msg.payload;\n    document.getElementById(\"total_time\").innerText = p.total_cost ?? 0;\n    document.getElementById(\"avg_time\").innerText = p.avg_cost ?? 0;\n  });\n})(scope);\n</script>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 1140,
-        "y": 280,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "dd73870283eee7e6",
-        "type": "debug",
-        "z": "8968d1b7f6f46c10",
-        "name": "debug 6",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 680,
-        "y": 120,
-        "wires": []
-    },
-    {
-        "id": "a45a6d468442da2f",
-        "type": "ui_button",
-        "z": "8968d1b7f6f46c10",
-        "name": "",
-        "group": "aba46986b29bad39",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Filtrar",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 410,
-        "y": 240,
-        "wires": [
-            [
-                "935d6c4ac6667988"
-            ]
-        ]
-    },
-    {
-        "id": "f2f68b5377e4f89e",
-        "type": "debug",
-        "z": "8968d1b7f6f46c10",
-        "name": "debug 7",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1080,
-        "y": 80,
-        "wires": []
     },
     {
         "id": "57a812208471b669",
@@ -2466,6 +2410,75 @@
         ]
     },
     {
+        "id": "fe4d7a637afea828",
+        "type": "function",
+        "z": "8968d1b7f6f46c10",
+        "name": "function 23",
+        "func": "// limpar memória\nflow.set(\"range_start\", null);\nflow.set(\"range_end\", null);\nflow.set(\"hora_inicio\", null);\nflow.set(\"hora_fim\", null);\n\n// limpar estatísticas visíveis no template\nmsg.payload=\"\";\n\n// opcional: sinal para outros nós\nmsg.reset = true;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1090,
+        "y": 460,
+        "wires": [
+            [
+                "c0fd1257c55a4e13",
+                "2572c5a03e56368f"
+            ]
+        ]
+    },
+    {
+        "id": "f2b494b44a28dfb8",
+        "type": "function",
+        "z": "8968d1b7f6f46c10",
+        "name": "function 19",
+        "func": "// limpar memória\nflow.set(\"range_start\", null);\nflow.set(\"range_end\", null);\nflow.set(\"hora_inicio\", null);\nflow.set(\"hora_fim\", null);\n\n// limpar estatísticas visíveis no template\nmsg.payload = {\n    sessions: 0,\n    total_energy: 0,\n    avg_energy: 0,\n    total_cost: 0,\n    avg_cost: 0\n};\n\n// opcional: sinal para outros nós\nmsg.reset = true;\nmsg.ui_control = { value: \"\" };\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 380,
+        "wires": [
+            [
+                "58a6266feeed148f"
+            ]
+        ]
+    },
+    {
+        "id": "a45a6d468442da2f",
+        "type": "ui_button",
+        "z": "8968d1b7f6f46c10",
+        "name": "",
+        "group": "aba46986b29bad39",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Filtrar",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 410,
+        "y": 240,
+        "wires": [
+            [
+                "935d6c4ac6667988"
+            ]
+        ]
+    },
+    {
         "id": "334d9413c5541010",
         "type": "ui_button",
         "z": "8968d1b7f6f46c10",
@@ -2491,27 +2504,6 @@
             [
                 "fe4d7a637afea828",
                 "f2b494b44a28dfb8"
-            ]
-        ]
-    },
-    {
-        "id": "fe4d7a637afea828",
-        "type": "function",
-        "z": "8968d1b7f6f46c10",
-        "name": "function 23",
-        "func": "// limpar memória\nflow.set(\"range_start\", null);\nflow.set(\"range_end\", null);\nflow.set(\"hora_inicio\", null);\nflow.set(\"hora_fim\", null);\n\n// limpar estatísticas visíveis no template\nmsg.payload=\"\";\n\n// opcional: sinal para outros nós\nmsg.reset = true;\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1090,
-        "y": 460,
-        "wires": [
-            [
-                "c0fd1257c55a4e13",
-                "2572c5a03e56368f"
             ]
         ]
     },
@@ -2568,11 +2560,121 @@
         ]
     },
     {
-        "id": "f2b494b44a28dfb8",
-        "type": "function",
+        "id": "58a6266feeed148f",
+        "type": "ui_template",
         "z": "8968d1b7f6f46c10",
-        "name": "function 19",
-        "func": "// limpar memória\nflow.set(\"range_start\", null);\nflow.set(\"range_end\", null);\nflow.set(\"hora_inicio\", null);\nflow.set(\"hora_fim\", null);\n\n// limpar estatísticas visíveis no template\nmsg.payload = {\n    sessions: 0,\n    total_energy: 0,\n    avg_energy: 0,\n    total_cost: 0,\n    avg_cost: 0\n};\n\n// opcional: sinal para outros nós\nmsg.reset = true;\nmsg.ui_control = { value: \"\" };\nreturn msg;",
+        "group": "aba46986b29bad39",
+        "name": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "<div style=\"display:flex; gap:12px; flex-wrap:wrap;\">\n    <div style=\"padding:12px; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,0.15); min-width:150px;\">\n        <div style=\"font-size:12px;color:#666\">Total Charging Time(hours)</div>\n        <div id=\"total_time\" style=\"font-size:20px; font-weight:600;\">-</div>\n    </div>\n    <div style=\"padding:12px; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,0.15); min-width:150px;\">\n        <div style=\"font-size:12px;color:#666\">Average Charging Time(hours)</div>\n        <div id=\"avg_time\" style=\"font-size:20px; font-weight:600;\">-</div>\n    </div>\n</div>\n\n<script>\n    (function(scope){\n  scope.$watch('msg', function(msg){\n    if(!msg || !msg.payload) return;\n    const p = msg.payload;\n    document.getElementById(\"total_time\").innerText = p.total_cost ?? 0;\n    document.getElementById(\"avg_time\").innerText = p.avg_cost ?? 0;\n  });\n})(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1140,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "167ca248b634dac4",
+        "type": "inject",
+        "z": "70b07c017b1138b9",
+        "name": "Train Model",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"action\": \"train\" }",
+        "payloadType": "json",
+        "x": 110,
+        "y": 180,
+        "wires": [
+            [
+                "0b4f06c7a251b45d"
+            ]
+        ]
+    },
+    {
+        "id": "fc079d8177527c5a",
+        "type": "http request",
+        "z": "70b07c017b1138b9",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 410,
+        "y": 180,
+        "wires": [
+            [
+                "953a632e90318932"
+            ]
+        ]
+    },
+    {
+        "id": "0b4f06c7a251b45d",
+        "type": "function",
+        "z": "70b07c017b1138b9",
+        "name": "function 20",
+        "func": "msg.method = \"GET\";\nmsg.url = \"http://app:8000/available-years\"; // ajusta a tua URL\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 180,
+        "wires": [
+            [
+                "fc079d8177527c5a"
+            ]
+        ]
+    },
+    {
+        "id": "953a632e90318932",
+        "type": "function",
+        "z": "70b07c017b1138b9",
+        "name": "function 21",
+        "func": "// espera payload: { \"years\": [2023, 2024, ...] }\nconst years = (msg.payload && msg.payload.years) ? msg.payload.years : [];\nmsg.options = years;\nmsg.ui_control = msg.ui_control || {};\nmsg.ui_control.options = years.map(y => ({ label: String(y), value: y }));\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 180,
+        "wires": [
+            [
+                "111d99f998937806"
+            ]
+        ]
+    },
+    {
+        "id": "a6f170f03fa9c8d8",
+        "type": "function",
+        "z": "70b07c017b1138b9",
+        "name": "function 22",
+        "func": "const year = msg.payload;\nflow.set(\"selected_year\", year);\n\n// preparar http request para /available-months/<year>\nmsg.method = \"GET\";\nmsg.url = \"http://app:8000/available-months/\" + year;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2580,11 +2682,427 @@
         "finalize": "",
         "libs": [],
         "x": 950,
+        "y": 180,
+        "wires": [
+            [
+                "2e35184438a883c2"
+            ]
+        ]
+    },
+    {
+        "id": "2e35184438a883c2",
+        "type": "http request",
+        "z": "70b07c017b1138b9",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1130,
+        "y": 180,
+        "wires": [
+            [
+                "540f889071255a36"
+            ]
+        ]
+    },
+    {
+        "id": "540f889071255a36",
+        "type": "function",
+        "z": "70b07c017b1138b9",
+        "name": "function 23",
+        "func": "const months = (msg.payload && msg.payload.months) ? msg.payload.months : [];\nmsg.options = months;\nmsg.ui_control = msg.ui_control || {};\nmsg.ui_control.options = months.map(m => ({ label: String(m), value: m }));\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1290,
+        "y": 180,
+        "wires": [
+            [
+                "b7d25d0b93fd60b4"
+            ]
+        ]
+    },
+    {
+        "id": "14faa5c28f20f166",
+        "type": "function",
+        "z": "70b07c017b1138b9",
+        "name": "function 24",
+        "func": "const month = msg.payload;\nflow.set(\"selected_month\", month);\nconst year = flow.get(\"selected_year\");\nmsg.method = \"GET\";\nmsg.url = `http://app:8000/available-weeks/${year}/${month}`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1610,
+        "y": 180,
+        "wires": [
+            [
+                "b390db082828ea2b"
+            ]
+        ]
+    },
+    {
+        "id": "b390db082828ea2b",
+        "type": "http request",
+        "z": "70b07c017b1138b9",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1790,
+        "y": 180,
+        "wires": [
+            [
+                "55271e626f60be89"
+            ]
+        ]
+    },
+    {
+        "id": "d57eb83808c0d202",
+        "type": "function",
+        "z": "70b07c017b1138b9",
+        "name": "function 26",
+        "func": "const year = flow.get(\"selected_year\");\nconst month = flow.get(\"selected_month\");\nconst week = flow.get(\"selected_week\");\nif (!year) {\n    node.error(\"Selecciona um ano antes de carregar as estatísticas\");\n    return null;\n}\n\nlet url = null;\nif (year && !month) {\n    // somente ano\n    url = `http://app:8000/cost/monthly/${year}`;\n} else if (year && month && !week) {\n    // ano + mês\n    url = `http://app:8000/cost/weekly/${year}/${month}`;\n} else if (year && month && week) {\n    // ano + mês + dia\n    url = `http://app:8000/cost/daily/${year}/${month}/${week}`;\n} else {\n    // caso improvável — default para ano\n    url = `http://app:8000/cost/monthly/${year}`;\n}\n\nmsg.method = \"GET\";\nmsg.url = url;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 260,
+        "wires": [
+            [
+                "5b2950c88d9268dc"
+            ]
+        ]
+    },
+    {
+        "id": "5b2950c88d9268dc",
+        "type": "http request",
+        "z": "70b07c017b1138b9",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 830,
+        "y": 260,
+        "wires": [
+            [
+                "b499e7e48e625625"
+            ]
+        ]
+    },
+    {
+        "id": "b499e7e48e625625",
+        "type": "function",
+        "z": "70b07c017b1138b9",
+        "name": "function 28",
+        "func": "// msg.payload já é o object {sessions, total_energy, ...}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1030,
+        "y": 260,
+        "wires": [
+            [
+                "393f96f6d23b3f41"
+            ]
+        ]
+    },
+    {
+        "id": "94a7aa5d311b69a1",
+        "type": "function",
+        "z": "70b07c017b1138b9",
+        "name": "function 29",
+        "func": "// limpar memória\nflow.set(\"selected_year\", null);\nflow.set(\"selected_month\", null);\nflow.set(\"selected_day\", null);\nflow.set(\"selected_week\",null);\n\n// 1) limpar dropdown YEAR\nnode.send({\n    _dropdown: \"year\",\n    options: [],\n    payload: \"\"\n});\n\n// 2) limpar dropdown MONTH\nnode.send({\n    _dropdown: \"month\",\n    options: [],\n    payload: \"\"\n});\n\n// 2) limpar dropdown Week\nnode.send({\n    _dropdown: \"week\",\n    options: [],\n    payload: \"\"\n});\n\n// 3) limpar dropdown DAY\nnode.send({\n    _dropdown: \"day\",\n    options: [],\n    payload: \"\"\n});\n\n// 4) limpar tabela\nnode.send({\n    _dropdown: \"table\",\n    payload: []\n});\n\n// 5) pedir nova lista de anos\nreturn { reset: true };",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 460,
+        "wires": [
+            [
+                "111d99f998937806",
+                "393f96f6d23b3f41",
+                "b7d25d0b93fd60b4",
+                "0b4f06c7a251b45d",
+                "49f6db25b897f3b5"
+            ]
+        ]
+    },
+    {
+        "id": "b92aa777b9d0d455",
+        "type": "http request",
+        "z": "70b07c017b1138b9",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 2190,
+        "y": 180,
+        "wires": [
+            [
+                "ced44ccdcc71ec13"
+            ]
+        ]
+    },
+    {
+        "id": "55271e626f60be89",
+        "type": "function",
+        "z": "70b07c017b1138b9",
+        "name": "function 30",
+        "func": "const weeks = (msg.payload && msg.payload.weeks) ? msg.payload.weeks : [];\nmsg.options = weeks;\nmsg.ui_control = msg.ui_control || {};\nmsg.ui_control.options = weeks.map(m => ({ label: String(m), value: m }));\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1940,
+        "y": 180,
+        "wires": [
+            [
+                "49f6db25b897f3b5"
+            ]
+        ]
+    },
+    {
+        "id": "747fa4176e0d9363",
+        "type": "function",
+        "z": "70b07c017b1138b9",
+        "name": "function 31",
+        "func": "const week = msg.payload;\nflow.set(\"selected_week\", week);\n\nconst month = flow.get(\"selected_month\");\nconst year = flow.get(\"selected_year\");\nmsg.method = \"GET\";\nmsg.url = `http://app:8000/available-days/${year}/${month}/${week}`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2180,
+        "y": 100,
+        "wires": [
+            [
+                "b92aa777b9d0d455"
+            ]
+        ]
+    },
+    {
+        "id": "a52f96f3906f4ec5",
+        "type": "ui_button",
+        "z": "70b07c017b1138b9",
+        "name": "",
+        "group": "dcc319e4acc497c0",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "button",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 430,
+        "y": 260,
+        "wires": [
+            [
+                "d57eb83808c0d202"
+            ]
+        ]
+    },
+    {
+        "id": "ea01a08938ee37fe",
+        "type": "ui_button",
+        "z": "70b07c017b1138b9",
+        "name": "",
+        "group": "dcc319e4acc497c0",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Reset",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 170,
         "y": 380,
         "wires": [
             [
-                "58a6266feeed148f"
+                "94a7aa5d311b69a1"
             ]
+        ]
+    },
+    {
+        "id": "111d99f998937806",
+        "type": "ui_dropdown",
+        "z": "70b07c017b1138b9",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "place": "Select Year",
+        "group": "dcc319e4acc497c0",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "options": [],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 760,
+        "y": 180,
+        "wires": [
+            [
+                "a6f170f03fa9c8d8"
+            ]
+        ]
+    },
+    {
+        "id": "b7d25d0b93fd60b4",
+        "type": "ui_dropdown",
+        "z": "70b07c017b1138b9",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "place": "Select Month",
+        "group": "dcc319e4acc497c0",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "options": [],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 1460,
+        "y": 180,
+        "wires": [
+            [
+                "14faa5c28f20f166"
+            ]
+        ]
+    },
+    {
+        "id": "49f6db25b897f3b5",
+        "type": "ui_dropdown",
+        "z": "70b07c017b1138b9",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "place": "Select Week",
+        "group": "dcc319e4acc497c0",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "options": [],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 2000,
+        "y": 80,
+        "wires": [
+            [
+                "747fa4176e0d9363"
+            ]
+        ]
+    },
+    {
+        "id": "393f96f6d23b3f41",
+        "type": "ui_template",
+        "z": "70b07c017b1138b9",
+        "group": "dcc319e4acc497c0",
+        "name": "",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "format": "<div style=\"display:flex; gap:12px; flex-wrap:wrap;\">\n    <div style=\"padding:12px; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,0.15); min-width:150px;\">\n        <div style=\"font-size:12px;color:#666\">Sessions</div>\n        <div id=\"sessions\" style=\"font-size:20px; font-weight:600;\">-</div>\n    </div>\n    <div style=\"padding:12px; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,0.15); min-width:150px;\">\n        <div style=\"font-size:12px;color:#666\">Total Energy (kWh)</div>\n        <div id=\"total_energy\" style=\"font-size:20px; font-weight:600;\">-</div>\n    </div>\n    <div style=\"padding:12px; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,0.15); min-width:150px;\">\n        <div style=\"font-size:12px;color:#666\">Avg Energy (kWh)</div>\n        <div id=\"avg_energy\" style=\"font-size:20px; font-weight:600;\">-</div>\n    </div>\n    <div style=\"padding:12px; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,0.15); min-width:150px;\">\n        <div style=\"font-size:12px;color:#666\">Total Cost</div>\n        <div id=\"total_cost\" style=\"font-size:20px; font-weight:600;\">-</div>\n    </div>\n    <div style=\"padding:12px; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,0.15); min-width:150px;\">\n        <div style=\"font-size:12px;color:#666\">Avg Cost</div>\n        <div id=\"avg_cost\" style=\"font-size:20px; font-weight:600;\">-</div>\n    </div>\n</div>\n\n<script>\n    (function(scope){\n  scope.$watch('msg', function(msg){\n    if(!msg || !msg.payload) return;\n    const p = msg.payload;\n    document.getElementById(\"sessions\").innerText = p.sessions ?? 0;\n    document.getElementById(\"total_energy\").innerText = p.total_energy ?? 0;\n    document.getElementById(\"avg_energy\").innerText = p.avg_energy ?? 0;\n    document.getElementById(\"total_cost\").innerText = p.total_cost ?? 0;\n    document.getElementById(\"avg_cost\").innerText = p.avg_cost ?? 0;\n  });\n})(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1220,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ced44ccdcc71ec13",
+        "type": "function",
+        "z": "70b07c017b1138b9",
+        "name": "function 25",
+        "func": "const week = msg.payload;\nflow.set(\"selected_week\", week);\n\nconst month = flow.get(\"selected_month\");\nconst year = flow.get(\"selected_year\");\nmsg.method = \"GET\";\nmsg.url = `http://app:8000/available-days/${year}/${month}/${week}`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2430,
+        "y": 200,
+        "wires": [
+            []
         ]
     }
 ]

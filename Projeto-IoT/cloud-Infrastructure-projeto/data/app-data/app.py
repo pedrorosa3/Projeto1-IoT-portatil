@@ -107,6 +107,193 @@ def health():
     return 'ok'
 
 
+@app.get("/cost/daily/<int:year>/<int:month>/<int:week>")
+def cost_daily(year, month, week):
+    conn = get_connection(); cursor = conn.cursor()
+    cursor.execute("""
+        SELECT DAY(start_time) AS DAY,
+               SUM(estimated_cost) AS total_cost,
+               AVG(estimated_cost) AS avg_cost,
+               SUM(energy_kwh) AS total_energy
+        FROM sessions
+        WHERE YEAR(start_time) = %s AND MONTH(start_time) = %s AND WEEK(start_time, 3) = %s
+        GROUP BY DAY(start_time)
+        ORDER BY day ASC;
+    """, (year, month, week))
+    result = [
+        {"day": row[0], "total_cost": float(row[1] or 0), "avg_cost": float(row[2] or 0), "total_energy": float(row[3] or 0)}
+        for row in cursor.fetchall()
+    ]
+    cursor.close(); conn.close()
+    return jsonify(result)
+
+@app.get("/cost/weekly/<int:year>/<int:month>")
+def cost_weekly(year, month):
+    conn = get_connection(); cursor = conn.cursor()
+    cursor.execute("""
+        SELECT WEEK(start_time, 3) AS week,
+               SUM(estimated_cost) AS total_cost,
+               AVG(estimated_cost) AS avg_cost,
+               SUM(energy_kwh) AS total_energy
+        FROM sessions
+        WHERE YEAR(start_time) = %s AND MONTH(start_time) = %s
+        GROUP BY WEEK(start_time, 3)
+        ORDER BY week ASC;
+    """, (year, month))
+    result = [
+        {"week": row[0], "total_cost": float(row[1] or 0), "avg_cost": float(row[2] or 0), "total_energy": float(row[3] or 0)}
+        for row in cursor.fetchall()
+    ]
+    cursor.close(); conn.close()
+    return jsonify(result)
+
+@app.get("/cost/monthly/<int:year>")
+def cost_monthly(year):
+    conn = get_connection(); cursor = conn.cursor()
+    cursor.execute("""
+        SELECT MONTH(start_time) AS month,
+               SUM(estimated_cost) AS total_cost,
+               AVG(estimated_cost) AS avg_cost,
+               SUM(energy_kwh) AS total_energy
+        FROM sessions
+        WHERE YEAR(start_time) = %s
+        GROUP BY MONTH(start_time)
+        ORDER BY month ASC;
+    """, (year,))
+    result = [
+        {"month": row[0], "total_cost": float(row[1] or 0), "avg_cost": float(row[2] or 0), "total_energy": float(row[3] or 0)}
+        for row in cursor.fetchall()
+    ]
+    cursor.close(); conn.close()
+    return jsonify(result)
+
+
+@app.get("/utilization/top-stations")
+def top_stations():
+    conn = get_connection(); cursor = conn.cursor()
+
+    cursor.execute("""
+        SELECT 
+            st.station_id,
+            st.station_code,
+            COUNT(s.session_id) AS total_sessions,
+            SUM(s.energy_kwh) AS total_energy,
+            SUM(s.estimated_cost) AS total_cost
+        FROM sessions s
+        LEFT JOIN stations st ON st.station_id = s.station_id
+        GROUP BY st.station_id, st.station_code
+        ORDER BY total_sessions DESC
+        LIMIT 10;
+    """)
+
+    data = [
+        {
+            "station_id": row[0],
+            "station_code": row[1],
+            "total_sessions": int(row[2]),
+            "total_energy": float(row[3] or 0),
+            "total_cost": float(row[4] or 0)
+        }
+        for row in cursor.fetchall()
+    ]
+
+    cursor.close(); conn.close()
+    return jsonify(data)
+
+
+@app.get("/utilization/top-users")
+def top_users():
+    conn = get_connection(); cursor = conn.cursor()
+
+    cursor.execute("""
+        SELECT 
+            u.user_id,
+            u.user_code,
+            COUNT(s.session_id) AS total_sessions,
+            SUM(s.energy_kwh) AS total_energy,
+            SUM(s.estimated_cost) AS total_cost
+        FROM sessions s
+        LEFT JOIN ev_users u ON u.user_id = s.user_id
+        GROUP BY u.user_id, u.user_code
+        ORDER BY total_sessions DESC
+        LIMIT 10;
+    """)
+
+    data = [
+        {
+            "user_id": row[0],
+            "user_code": row[1],
+            "total_sessions": int(row[2]),
+            "total_energy": float(row[3] or 0),
+            "total_cost": float(row[4] or 0)
+        }
+        for row in cursor.fetchall()
+    ]
+
+    cursor.close(); conn.close()
+    return jsonify(data)
+
+@app.get("/utilization/user/<int:user_id>")
+def user_profile(user_id):
+    conn = get_connection(); cursor = conn.cursor()
+
+    cursor.execute("""
+        SELECT 
+            COUNT(*) AS sessions,
+            SUM(energy_kwh),
+            AVG(energy_kwh),
+            SUM(estimated_cost),
+            AVG(estimated_cost),
+            AVG(duration_h)
+        FROM sessions
+        WHERE user_id = %s;
+    """, (user_id,))
+
+    row = cursor.fetchone()
+    
+    data = {
+        "sessions": row[0] or 0,
+        "total_energy": float(row[1] or 0),
+        "avg_energy": float(row[2] or 0),
+        "total_cost": float(row[3] or 0),
+        "avg_cost": float(row[4] or 0),
+        "avg_duration": float(row[5] or 0)
+    }
+
+    cursor.close(); conn.close()
+    return jsonify(data)
+
+@app.get("/utilization/station/<int:station_id>")
+def station_profile(station_id):
+    conn = get_connection(); cursor = conn.cursor()
+
+    cursor.execute("""
+        SELECT 
+            COUNT(*) AS sessions,
+            SUM(energy_kwh),
+            AVG(energy_kwh),
+            SUM(estimated_cost),
+            AVG(estimated_cost),
+            AVG(duration_h)
+        FROM sessions
+        WHERE station_id = %s;
+    """, (station_id,))
+
+    row = cursor.fetchone()
+
+    data = {
+        "sessions": row[0] or 0,
+        "total_energy": float(row[1] or 0),
+        "avg_energy": float(row[2] or 0),
+        "total_cost": float(row[3] or 0),
+        "avg_cost": float(row[4] or 0),
+        "avg_duration": float(row[5] or 0)
+    }
+
+    cursor.close(); conn.close()
+    return jsonify(data)
+
+
 @app.get("/stats/range")
 def stats_range():
     start = request.args.get("start")
