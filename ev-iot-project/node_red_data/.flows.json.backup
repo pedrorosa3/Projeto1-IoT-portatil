@@ -1,0 +1,1982 @@
+[
+    {
+        "id": "f6f2187d.f17ca8",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "9db1eb2b3aada282",
+        "type": "MySQLdatabase",
+        "name": "ev-db",
+        "host": "database",
+        "port": "3306",
+        "db": "ev_charging_db",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "c24689c7d69d6c04",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "9e50496f82b1e600",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "87fd82cb589a9a0f",
+        "type": "ui-page",
+        "name": "Map Info and RTD",
+        "ui": "c24689c7d69d6c04",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "9e50496f82b1e600",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 3,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "78ab1ff718c0b178",
+        "type": "ui-group",
+        "name": "Dropdown Menu",
+        "page": "87fd82cb589a9a0f",
+        "width": "4",
+        "height": 1,
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "026d69d348dfdc9a",
+        "type": "ui-group",
+        "name": "Stations Info",
+        "page": "87fd82cb589a9a0f",
+        "width": 6,
+        "height": 1,
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "c3565ffca7addf6b",
+        "type": "ui-group",
+        "name": "Real Time Data",
+        "page": "87fd82cb589a9a0f",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "109e7e388ed07dd0",
+        "type": "ui-page",
+        "name": "Charts",
+        "ui": "c24689c7d69d6c04",
+        "path": "/page2",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "9e50496f82b1e600",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 2,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "817a71b1bc239ab1",
+        "type": "ui-group",
+        "name": "Clusters",
+        "page": "109e7e388ed07dd0",
+        "width": 6,
+        "height": 1,
+        "order": 6,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "df78bae64cb826d9",
+        "type": "ui-group",
+        "name": "Charging per day of the week",
+        "page": "109e7e388ed07dd0",
+        "width": 6,
+        "height": 1,
+        "order": 5,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "bb889efea976f5ac",
+        "type": "ui-group",
+        "name": "Distribution of charging sessions by time of day",
+        "page": "109e7e388ed07dd0",
+        "width": 6,
+        "height": 1,
+        "order": 4,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "68b63af5b70a6632",
+        "type": "ui-group",
+        "name": "Most Used Vehicles",
+        "page": "109e7e388ed07dd0",
+        "width": 6,
+        "height": 1,
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "2c185407fa9486ae",
+        "type": "ui-group",
+        "name": "Most Profitable Stations",
+        "page": "109e7e388ed07dd0",
+        "width": 6,
+        "height": 1,
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "949e8a88c1027b33",
+        "type": "ui-group",
+        "name": "State of Charge",
+        "page": "109e7e388ed07dd0",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "7bd916981ebd1132",
+        "type": "ui-group",
+        "name": "KPI's",
+        "page": "109e7e388ed07dd0",
+        "width": "12",
+        "height": 1,
+        "order": 7,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "1f59125ebf527e97",
+        "type": "ui-page",
+        "name": "Charging Table",
+        "ui": "c24689c7d69d6c04",
+        "path": "/page3",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "9e50496f82b1e600",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "c53beb9da55f750d",
+        "type": "ui-group",
+        "name": "Table",
+        "page": "1f59125ebf527e97",
+        "width": "12",
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "b9b5cec143804b2d",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "ca.crt",
+        "servername": "",
+        "verifyservercert": false,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "db94ba65843983c6",
+        "type": "mqtt-broker",
+        "name": "Mosquitto",
+        "broker": "mqtt-broker",
+        "port": "8883",
+        "tls": "b9b5cec143804b2d",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "4c6516c6fd5a96dc",
+        "type": "mysql",
+        "z": "f6f2187d.f17ca8",
+        "mydb": "9db1eb2b3aada282",
+        "name": "",
+        "x": 550,
+        "y": 1000,
+        "wires": [
+            [
+                "4010ae0b3e880493"
+            ]
+        ]
+    },
+    {
+        "id": "d945ec7d1fb44480",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Select Distrito",
+        "func": "msg.topic = `SELECT DISTINCT distrito \nFROM ev_stations \nWHERE distrito \nIS NOT NULL ORDER BY distrito;`\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 1000,
+        "wires": [
+            [
+                "4c6516c6fd5a96dc"
+            ]
+        ]
+    },
+    {
+        "id": "68fa6a859a27e736",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 1000,
+        "wires": [
+            [
+                "d945ec7d1fb44480"
+            ]
+        ]
+    },
+    {
+        "id": "4010ae0b3e880493",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Format Distrito",
+        "func": "var opts = msg.payload.map(o => o.distrito);\n\nopts.unshift(\"TODOS OS DISTRITOS\");\nmsg.ui_update = { options: opts };\nmsg.payload = \"TODOS OS DISTRITOS\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 1000,
+        "wires": [
+            [
+                "9b27a9af7bab3b23"
+            ]
+        ]
+    },
+    {
+        "id": "9b27a9af7bab3b23",
+        "type": "ui-dropdown",
+        "z": "f6f2187d.f17ca8",
+        "group": "78ab1ff718c0b178",
+        "name": "Distritos",
+        "label": "Distritos",
+        "tooltip": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "chips": false,
+        "clearable": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "typeIsComboBox": true,
+        "msgTrigger": "onChange",
+        "x": 900,
+        "y": 1000,
+        "wires": [
+            [
+                "97bfffb564520b38"
+            ]
+        ]
+    },
+    {
+        "id": "97bfffb564520b38",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Select Concelho",
+        "func": "var distrito = msg.payload;\n\nflow.set(\"distrito_selecionado\", distrito);\n\nvar query = \"SELECT DISTINCT concelho FROM ev_stations WHERE 1=1\";\nvar params = [];\n\nif (distrito && distrito !== \"TODOS OS DISTRITOS\") {\n    query += \" AND distrito = ? ORDER BY concelho\";\n    params.push(distrito);\n} else { query += \" ORDER BY concelho\"; }\n\nmsg.topic = query; msg.payload = params;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 1140,
+        "wires": [
+            [
+                "f6b162fb68c0dc8a"
+            ]
+        ]
+    },
+    {
+        "id": "f6b162fb68c0dc8a",
+        "type": "mysql",
+        "z": "f6f2187d.f17ca8",
+        "mydb": "9db1eb2b3aada282",
+        "name": "",
+        "x": 550,
+        "y": 1140,
+        "wires": [
+            [
+                "9cebd770547abf7c"
+            ]
+        ]
+    },
+    {
+        "id": "9cebd770547abf7c",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Format Concelho",
+        "func": "var opts = msg.payload.map(o => o.concelho);\n\nopts.unshift(\"TODOS OS CONCELHOS\");\nmsg.ui_update = { options: opts };\nmsg.payload = \"TODOS OS CONCELHOS\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 1140,
+        "wires": [
+            [
+                "5f44eeb12c6aec85"
+            ]
+        ]
+    },
+    {
+        "id": "5f44eeb12c6aec85",
+        "type": "ui-dropdown",
+        "z": "f6f2187d.f17ca8",
+        "group": "78ab1ff718c0b178",
+        "name": "Concelho",
+        "label": "Concelho",
+        "tooltip": "",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "chips": false,
+        "clearable": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "typeIsComboBox": true,
+        "msgTrigger": "onChange",
+        "x": 920,
+        "y": 1140,
+        "wires": [
+            [
+                "0c4a22b9f9a1ccc1"
+            ]
+        ]
+    },
+    {
+        "id": "0c4a22b9f9a1ccc1",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Map Query",
+        "func": "var concelho = msg.payload;\nvar distrito = flow.get(\"distrito_selecionado\");\nvar params = [];\nvar query = \"SELECT station_id, latitude, longitude, distrito, concelho, cluster_profile FROM ev_stations WHERE latitude IS NOT NULL AND longitude IS NOT NULL \";\n\nif (distrito && distrito !== \"TODOS OS DISTRITOS\") {\n    query += \" AND distrito = ? \"; params.push(distrito);\n    if (concelho && concelho !== \"TODOS OS CONCELHOS\") {\n        query += \" AND concelho = ? \"; params.push(concelho);\n    }\n}\n\nquery += \" LIMIT 2000\";\nmsg.topic = query; msg.payload = params;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 1300,
+        "wires": [
+            [
+                "ea5e548048606a7a"
+            ]
+        ]
+    },
+    {
+        "id": "ea5e548048606a7a",
+        "type": "mysql",
+        "z": "f6f2187d.f17ca8",
+        "mydb": "9db1eb2b3aada282",
+        "name": "",
+        "x": 550,
+        "y": 1300,
+        "wires": [
+            [
+                "e5a4eb62797b55be"
+            ]
+        ]
+    },
+    {
+        "id": "e5a4eb62797b55be",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Format Map",
+        "func": "var stations = msg.payload;\nvar mapPoints = [];\n\nfor (var i = 0; i < stations.length; i++) {\n    var s = stations[i];\n    var color = \"#808080\";\n    switch (s.cluster_profile) {\n        case 0: color = \"#ff9f00\"; break;  // Regular AC Charging\n        case 1: color = \"#000000\"; break;  // Top-Ups\n        case 2: color = \"#00cc00\"; break;  // Fast-Charging\n        case 3: color = \"#4169e1\"; break;  // Medium-Energy DC Charging\n    }\n    mapPoints.push({\n        name: s.station_id, lat: s.latitude, lon: s.longitude, layer: \"Stations\",\n        cluster_profile: s.cluster_profile, // Guardar para o clique\n        icon: \"circle\", iconColor: color, radius: 5,\n        popup: s.station_id\n    });\n}\n\nreturn [{payload: mapPoints}];",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 1300,
+        "wires": [
+            [
+                "66364acd6c5a5946",
+                "da253c2d18aec8e8"
+            ]
+        ]
+    },
+    {
+        "id": "66364acd6c5a5946",
+        "type": "worldmap",
+        "z": "f6f2187d.f17ca8",
+        "name": "World Map",
+        "lat": "39.557191",
+        "lon": "-7.8536599",
+        "zoom": "7",
+        "layer": "OSMC",
+        "cluster": "",
+        "maxage": "",
+        "usermenu": "show",
+        "layers": "show",
+        "panit": "false",
+        "panlock": "false",
+        "zoomlock": "false",
+        "hiderightclick": "false",
+        "coords": "none",
+        "showgrid": "false",
+        "showruler": "false",
+        "allowFileDrop": "false",
+        "path": "/worldmap",
+        "overlist": "DR,CO,RA,DN",
+        "maplist": "OSMG,OSMC,EsriC,EsriS,UKOS",
+        "mapname": "",
+        "mapurl": "",
+        "mapopt": "",
+        "mapwms": false,
+        "x": 910,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "a5fddd59bb4ec5bb",
+        "type": "worldmap in",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "path": "/worldmap",
+        "events": "connect,disconnect,point,draw,layer,bounds,files,click,other",
+        "x": 360,
+        "y": 1480,
+        "wires": [
+            [
+                "61d2ac58d36d2940"
+            ]
+        ]
+    },
+    {
+        "id": "61d2ac58d36d2940",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Station Query",
+        "func": "var event = msg.payload;\n\n// A \"GUARDA\": Só corre se o clique for na camada \"Stations\"\nif (!event.layer || event.layer !== \"Stations\") {\n    return null;\n}\n\n// O ID está na propriedade 'name'\nvar station_id = event.name;\n\n// --- A CORREÇÃO ---\n// Guardamos o ID e o Cluster em variáveis com nomes simples e seguros\nmsg.my_station_id = station_id;\nmsg.my_cluster_id = event.cluster_profile;\n// ------------------\n\n// Query para ir buscar as estatísticas DESTA estação\nvar query = \"SELECT \" +\n                \"COUNT(*) AS total, \" +\n                \"AVG(energy_consumed) AS energia, \" +\n                \"AVG(duration) AS duracao, \" +\n                \"SUM(cost) AS custo \" + \n            \"FROM charging \" +\n            \"WHERE station_id = ?\"; \n\nmsg.topic = query;\nmsg.payload = [station_id]; \n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 1480,
+        "wires": [
+            [
+                "a79c540b302ad8aa"
+            ]
+        ]
+    },
+    {
+        "id": "a79c540b302ad8aa",
+        "type": "mysql",
+        "z": "f6f2187d.f17ca8",
+        "mydb": "9db1eb2b3aada282",
+        "name": "",
+        "x": 710,
+        "y": 1480,
+        "wires": [
+            [
+                "364648e234c1c054"
+            ]
+        ]
+    },
+    {
+        "id": "364648e234c1c054",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Format Info",
+        "func": "var s = msg.payload[0];\nvar c_name = \"Unknown\";\n\n// --- A CORREÇÃO ---\n// Recuperamos as variáveis usando OS MESMOS NOMES que definimos antes\nvar station_id = msg.my_station_id;\nvar cluster_id = msg.my_cluster_id;\n// ------------------\n\n// Cluster Mapping\nif (cluster_id === 0) c_name = \"Regular AC Charging\";\nif (cluster_id === 1) c_name = \"Top-ups\";\nif (cluster_id === 2) c_name = \"Fast Charging\";\nif (cluster_id === 3) c_name = \"Medium-Energy DC Charging\";\n\n// Safety function\nfunction safe(val) {\n    return (val === null || val === undefined) ? 0.00 : Number(val);\n}\n\n// HTML\nvar html = `\n<div style=\"padding: 5px;\">\n    \n    <div style=\"display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; padding-bottom: 8px; margin-bottom: 15px;\">\n        <h3 style=\"margin: 0; color: #0094CE; font-size: 1.3em;\">${station_id}</h3>\n        <span style=\"background-color: #e0f7fa; color: #006064; padding: 4px 8px; border-radius: 12px; font-size: 0.75em; font-weight: bold; border: 1px solid #b2ebf2; white-space: nowrap;\">\n            ${c_name}\n        </span>\n    </div>\n\n`;\n\nif (s && s.total > 0) {\n    html += `\n    <div style=\"display: grid; grid-template-columns: 1fr 1fr; gap: 15px;\">\n        <div style=\"text-align: center; background: #f9f9f9; padding: 8px; border-radius: 6px;\">\n            <div style=\"font-size: 0.7em; color: #666; text-transform: uppercase;\">Sessions</div>\n            <div style=\"font-weight: bold; font-size: 1.1em; color: #333;\">${s.total}</div>\n        </div>\n        <div style=\"text-align: center; background: #f0fdf4; padding: 8px; border-radius: 6px; border: 1px solid #dcfce7;\">\n            <div style=\"font-size: 0.7em; color: #166534; text-transform: uppercase;\">Revenue</div>\n            <div style=\"font-weight: bold; font-size: 1.1em; color: #15803d;\">${safe(s.custo).toFixed(2)} €</div>\n        </div>\n        <div style=\"text-align: center;\">\n            <div style=\"font-size: 1.1em; font-weight: bold;\">${safe(s.energia).toFixed(2)} <small>kWh</small></div>\n            <div style=\"font-size: 0.7em; color: #888;\">Avg Energy</div>\n        </div>\n        <div style=\"text-align: center;\">\n            <div style=\"font-size: 1.1em; font-weight: bold;\">${safe(s.duracao).toFixed(2)} <small>h</small></div>\n            <div style=\"font-size: 0.7em; color: #888;\">Avg Duration</div>\n        </div>\n    </div>\n    `;\n} else { \n    html += `<p style=\"color: #999; font-style: italic; text-align: center; font-size: 0.9em;\">No history available.</p>`; \n}\n\nhtml += `</div>`;\nmsg.payload = html;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 1480,
+        "wires": [
+            [
+                "bab75ec8e0c41112",
+                "5e9b75d0df9c0e31"
+            ]
+        ]
+    },
+    {
+        "id": "bab75ec8e0c41112",
+        "type": "ui-template",
+        "z": "f6f2187d.f17ca8",
+        "group": "026d69d348dfdc9a",
+        "page": "",
+        "ui": "",
+        "name": "Stations Info UI",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<div v-html=\"msg.payload\"></div>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1060,
+        "y": 1480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "deecba16a49fcfe5",
+        "type": "mqtt in",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "topic": "iot/ev-station",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "db94ba65843983c6",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 370,
+        "y": 1580,
+        "wires": [
+            [
+                "a995de1c282a2403"
+            ]
+        ]
+    },
+    {
+        "id": "a995de1c282a2403",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Format RTD",
+        "func": "// 1. Ensure we have the data object (Protection against double parse)\nvar data = (typeof msg.payload === \"object\") ? msg.payload : JSON.parse(msg.payload);\n\n// 2. Extract and Format the data (to avoid numbers with 10 decimal places)\n// We use parseFloat() to ensure it's a number and .toFixed(2) to round it\nvar energy = parseFloat(data['Energy Consumed (kWh)']).toFixed(2);\nvar cost = parseFloat(data['Charging Cost (EUR)']).toFixed(2);\nvar duration = parseFloat(data['Charging Duration (hours)']).toFixed(2);\nvar vehicle = data['Vehicle Model'];\nvar station = data['Charging Station ID'];\n\n// 3. Create HTML with an organized layout (Grid and Flexbox)\nvar html = `\n<div style=\"padding: 15px; border-left: 6px solid #00ff00; background-color: #2c3e50; color: white; border-radius: 4px; font-family: sans-serif; box-shadow: 0 4px 6px rgba(0,0,0,0.3);\">\n    \n    <div style=\"display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;\">\n        <h3 style=\"margin: 0; color: #00ff00; font-size: 1.2em; display: flex; align-items: center;\">\n            ⚡ New Session\n        </h3>\n        <span style=\"background-color: rgba(0, 255, 0, 0.2); color: #00ff00; padding: 2px 8px; border-radius: 10px; font-size: 0.7em; font-weight: bold; border: 1px solid #00ff00;\">LIVE</span>\n    </div>\n\n    <div style=\"display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 15px;\">\n        <div style=\"background-color: #34495e; padding: 10px; border-radius: 6px;\">\n            <div style=\"font-size: 0.7em; color: #95a5a6; text-transform: uppercase; margin-bottom: 4px;\">Station</div>\n            <div style=\"font-weight: bold; font-size: 0.95em;\">${station}</div>\n        </div>\n        <div style=\"background-color: #34495e; padding: 10px; border-radius: 6px;\">\n            <div style=\"font-size: 0.7em; color: #95a5a6; text-transform: uppercase; margin-bottom: 4px;\">Vehicle</div>\n            <div style=\"font-weight: bold; font-size: 0.95em;\">${vehicle}</div>\n        </div>\n    </div>\n\n    <hr style=\"border: 0; border-top: 1px solid #465c70; margin: 10px 0;\">\n\n    <div style=\"display: flex; justify-content: space-between; text-align: center; padding-top: 5px;\">\n        \n        <div>\n            <div style=\"font-size: 1.4em; font-weight: bold; color: #4ade80;\">${energy} <span style=\"font-size:0.6em; color: #bdc3c7;\">kWh</span></div>\n            <div style=\"font-size: 0.75em; color: #bdc3c7;\">Energy</div>\n        </div>\n\n        <div style=\"border-left: 1px solid #465c70; border-right: 1px solid #465c70; padding: 0 15px;\">\n            <div style=\"font-size: 1.4em; font-weight: bold; color: #facc15;\">${cost} <span style=\"font-size:0.6em; color: #bdc3c7;\">€</span></div>\n            <div style=\"font-size: 0.75em; color: #bdc3c7;\">Cost</div>\n        </div>\n\n        <div>\n            <div style=\"font-size: 1.4em; font-weight: bold; color: #60a5fa;\">${duration} <span style=\"font-size:0.6em; color: #bdc3c7;\">h</span></div>\n            <div style=\"font-size: 0.75em; color: #bdc3c7;\">Duration</div>\n        </div>\n    </div>\n\n</div>\n`;\n\nmsg.payload = html;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 1580,
+        "wires": [
+            [
+                "fad6f8dcff60871c"
+            ]
+        ]
+    },
+    {
+        "id": "fad6f8dcff60871c",
+        "type": "ui-template",
+        "z": "f6f2187d.f17ca8",
+        "group": "c3565ffca7addf6b",
+        "page": "",
+        "ui": "",
+        "name": "RTD UI",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<div v-html=\"msg.payload\"></div>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 720,
+        "y": 1580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b7653667aaa4e395",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Select Cluster",
+        "func": "msg.topic = `SELECT \n    CASE\n        WHEN cluster_profile = 0 THEN 'Regular AC Charging'\n        WHEN cluster_profile = 1 THEN 'Top-Ups'\n        WHEN cluster_profile = 2 THEN 'Fast Charging'\n        WHEN cluster_profile = 3 THEN 'Medium Power DC Charging'\n        ELSE 'Desconhecido'\n    END AS label,\n    COUNT(*) AS value\nFROM ev_stations\nWHERE cluster_profile IS NOT NULL\nGROUP BY cluster_profile\nORDER BY label;`\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 440,
+        "wires": [
+            [
+                "7061e292da2f1c2b"
+            ]
+        ]
+    },
+    {
+        "id": "7061e292da2f1c2b",
+        "type": "mysql",
+        "z": "f6f2187d.f17ca8",
+        "mydb": "9db1eb2b3aada282",
+        "name": "",
+        "x": 570,
+        "y": 440,
+        "wires": [
+            [
+                "7b3eadba22682d19",
+                "ce8556b62da23a93"
+            ]
+        ]
+    },
+    {
+        "id": "7b3eadba22682d19",
+        "type": "ui-chart",
+        "z": "f6f2187d.f17ca8",
+        "group": "817a71b1bc239ab1",
+        "name": "Types of stations",
+        "label": "Types of stations",
+        "order": 1,
+        "chartType": "doughnut",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "",
+        "xAxisProperty": "label",
+        "xAxisPropertyType": "property",
+        "xAxisType": "radial",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "value",
+        "yAxisPropertyType": "property",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "replace",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#1c71d8",
+            "#f9f06b",
+            "#2ec27e",
+            "#c64600",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 750,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "53d736f368a02110",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Select DotW",
+        "func": "msg.topic = `SELECT \n    day_of_week AS series, \n    COUNT(*) AS data        \nFROM charging\nGROUP BY day_of_week\nORDER BY FIELD(day_of_week, 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday');`\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 340,
+        "wires": [
+            [
+                "da885b6598383d0f"
+            ]
+        ]
+    },
+    {
+        "id": "da885b6598383d0f",
+        "type": "mysql",
+        "z": "f6f2187d.f17ca8",
+        "mydb": "9db1eb2b3aada282",
+        "name": "",
+        "x": 530,
+        "y": 340,
+        "wires": [
+            [
+                "bbf1c82f0256cdf4",
+                "33d8e184ce77fb46"
+            ]
+        ]
+    },
+    {
+        "id": "bbf1c82f0256cdf4",
+        "type": "ui-chart",
+        "z": "f6f2187d.f17ca8",
+        "group": "df78bae64cb826d9",
+        "name": "Charging per DotW",
+        "label": "Day of the Week",
+        "order": 1,
+        "chartType": "pie",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "",
+        "xAxisProperty": "series",
+        "xAxisPropertyType": "property",
+        "xAxisType": "radial",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "data",
+        "yAxisPropertyType": "property",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "replace",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": false,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 710,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "96182b3aa24d83dd",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1080,
+        "y": 320,
+        "wires": [
+            [
+                "2116c0536513065d",
+                "74258f3097726986"
+            ]
+        ]
+    },
+    {
+        "id": "2116c0536513065d",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Cluster Info",
+        "func": "msg.topic = `SELECT \n    cluster_profile,\n    COUNT(DISTINCT s.station_id) AS 'Total Estações',\n    ROUND(AVG(c.energy_consumed), 2) AS 'Energia Média (kWh)',\n    ROUND(AVG(c.duration), 2) AS 'Duração Média (h)'\nFROM \n    ev_stations s\nJOIN \n    charging c ON s.station_id = c.station_id\nWHERE \n    s.cluster_profile IS NOT NULL\nGROUP BY \n    s.cluster_profile\nORDER BY \n    cluster_profile;`\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1250,
+        "y": 320,
+        "wires": [
+            [
+                "586f87f374a104db"
+            ]
+        ]
+    },
+    {
+        "id": "586f87f374a104db",
+        "type": "mysql",
+        "z": "f6f2187d.f17ca8",
+        "mydb": "9db1eb2b3aada282",
+        "name": "",
+        "x": 1410,
+        "y": 320,
+        "wires": [
+            [
+                "c72680573c242bac"
+            ]
+        ]
+    },
+    {
+        "id": "c72680573c242bac",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "Cluster Debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1580,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "33d8e184ce77fb46",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "Debug DotW",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 650,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "ce8556b62da23a93",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "Debug Cluster",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "2907b2f5c38125be",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 660,
+        "wires": [
+            [
+                "53d736f368a02110",
+                "b7653667aaa4e395",
+                "b567e89d0fdb328f",
+                "7905ad25d4ce2b43",
+                "f81bfdd643d2a0d7",
+                "3c1636b7dcc5e6d9",
+                "707071518d93a043",
+                "faf4c0973dedc22d"
+            ]
+        ]
+    },
+    {
+        "id": "da253c2d18aec8e8",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "5e9b75d0df9c0e31",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "b567e89d0fdb328f",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Select TotD",
+        "func": "msg.topic = `SELECT \n    time_of_day AS label, \n    COUNT(*) AS value\nFROM charging\nGROUP BY time_of_day\nORDER BY FIELD(time_of_day, 'Morning', 'Afternoon', 'Evening', 'Night');`\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 580,
+        "wires": [
+            [
+                "7bcf99cc21a4cc07"
+            ]
+        ]
+    },
+    {
+        "id": "7bcf99cc21a4cc07",
+        "type": "mysql",
+        "z": "f6f2187d.f17ca8",
+        "mydb": "9db1eb2b3aada282",
+        "name": "",
+        "x": 510,
+        "y": 580,
+        "wires": [
+            [
+                "9c0dea7bb476fb76"
+            ]
+        ]
+    },
+    {
+        "id": "9c0dea7bb476fb76",
+        "type": "ui-chart",
+        "z": "f6f2187d.f17ca8",
+        "group": "bb889efea976f5ac",
+        "name": "Charging Distribution TotD",
+        "label": "",
+        "order": 1,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "Time of the Day",
+        "xAxisProperty": "label",
+        "xAxisPropertyType": "property",
+        "xAxisType": "category",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "Charging Sessions",
+        "yAxisProperty": "value",
+        "yAxisPropertyType": "property",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "replace",
+        "stackSeries": false,
+        "pointShape": "cross",
+        "pointRadius": 4,
+        "showLegend": false,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#ff0000",
+            "#f9f06b",
+            "#2ec27e",
+            "#c64600",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#2ca02c"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 710,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c573b696a0a1ea63",
+        "type": "mysql",
+        "z": "f6f2187d.f17ca8",
+        "mydb": "9db1eb2b3aada282",
+        "name": "",
+        "x": 530,
+        "y": 660,
+        "wires": [
+            [
+                "cd9c83eeb2411a60"
+            ]
+        ]
+    },
+    {
+        "id": "7905ad25d4ce2b43",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Select Vehicle",
+        "func": "msg.topic = `SELECT \n    vehicle_model AS label, \n    COUNT(*) AS value\nFROM charging\nGROUP BY vehicle_model\nORDER BY value DESC\nLIMIT 5;`\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 660,
+        "wires": [
+            [
+                "c573b696a0a1ea63"
+            ]
+        ]
+    },
+    {
+        "id": "cd9c83eeb2411a60",
+        "type": "ui-chart",
+        "z": "f6f2187d.f17ca8",
+        "group": "68b63af5b70a6632",
+        "name": "Vehicle",
+        "label": "",
+        "order": 1,
+        "chartType": "bar",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "Vehicle",
+        "xAxisProperty": "label",
+        "xAxisPropertyType": "property",
+        "xAxisType": "category",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "Quantity",
+        "yAxisProperty": "value",
+        "yAxisPropertyType": "property",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "replace",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": false,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#1c71d8",
+            "#f9f06b",
+            "#2ec27e",
+            "#c64600",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 680,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fad11377fc81abd2",
+        "type": "mysql",
+        "z": "f6f2187d.f17ca8",
+        "mydb": "9db1eb2b3aada282",
+        "name": "",
+        "x": 530,
+        "y": 720,
+        "wires": [
+            [
+                "bd962e83982a85fc"
+            ]
+        ]
+    },
+    {
+        "id": "f81bfdd643d2a0d7",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Select Station",
+        "func": "msg.topic = `SELECT \n    station_id AS label, \n    SUM(cost) AS value\nFROM charging\nGROUP BY station_id\nORDER BY value DESC\nLIMIT 5;`\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 720,
+        "wires": [
+            [
+                "fad11377fc81abd2"
+            ]
+        ]
+    },
+    {
+        "id": "bd962e83982a85fc",
+        "type": "ui-chart",
+        "z": "f6f2187d.f17ca8",
+        "group": "2c185407fa9486ae",
+        "name": "Stations",
+        "label": "",
+        "order": 1,
+        "chartType": "bar",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "Station",
+        "xAxisProperty": "label",
+        "xAxisPropertyType": "property",
+        "xAxisType": "category",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "Revenue",
+        "yAxisProperty": "value",
+        "yAxisPropertyType": "property",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "replace",
+        "stackSeries": true,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": false,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#2ca02c",
+            "#f9f06b",
+            "#2ec27e",
+            "#c64600",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 680,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3c1636b7dcc5e6d9",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Select SoC",
+        "func": "msg.topic = `SELECT \n    CASE\n        WHEN state_of_charge_start < 20 THEN 'Low (<20%)'\n        WHEN state_of_charge_start BETWEEN 20 AND 60 THEN 'Normal (20-60%)'\n        WHEN state_of_charge_start > 60 THEN 'High (>60%)'\n    END AS label,\n    COUNT(*) AS value\nFROM charging\nWHERE state_of_charge_start IS NOT NULL\nGROUP BY label;`\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 780,
+        "wires": [
+            [
+                "d3464567e0f287b9"
+            ]
+        ]
+    },
+    {
+        "id": "d3464567e0f287b9",
+        "type": "mysql",
+        "z": "f6f2187d.f17ca8",
+        "mydb": "9db1eb2b3aada282",
+        "name": "",
+        "x": 530,
+        "y": 780,
+        "wires": [
+            [
+                "db321513ba7844a9"
+            ]
+        ]
+    },
+    {
+        "id": "db321513ba7844a9",
+        "type": "ui-chart",
+        "z": "f6f2187d.f17ca8",
+        "group": "949e8a88c1027b33",
+        "name": "State of Charge",
+        "label": "",
+        "order": 1,
+        "chartType": "bar",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "State",
+        "xAxisProperty": "label",
+        "xAxisPropertyType": "property",
+        "xAxisType": "category",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "Battery",
+        "yAxisProperty": "value",
+        "yAxisPropertyType": "property",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "replace",
+        "stackSeries": true,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": false,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#613583",
+            "#f9f06b",
+            "#2ec27e",
+            "#c64600",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 700,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "707071518d93a043",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Select KPI's",
+        "func": "msg.topic = `SELECT \n    SUM(energy_consumed) as total_energy,\n    SUM(cost) as total_revenue,\n    AVG(vehicle_age) as avg_age\nFROM charging;`\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 840,
+        "wires": [
+            [
+                "a9f68162455b1f69"
+            ]
+        ]
+    },
+    {
+        "id": "a9f68162455b1f69",
+        "type": "mysql",
+        "z": "f6f2187d.f17ca8",
+        "mydb": "9db1eb2b3aada282",
+        "name": "",
+        "x": 530,
+        "y": 840,
+        "wires": [
+            [
+                "2f4be968961f1548"
+            ]
+        ]
+    },
+    {
+        "id": "2f4be968961f1548",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Format KPI's",
+        "func": "// 1. Verificar se recebemos dados\nvar data = msg.payload[0];\n\nif (!data) {\n    msg.payload = \"<p>Sem dados</p>\";\n    return msg;\n}\n\n// 2. Formatar números (Para inglês: 'en-US'. Para português: 'pt-PT')\n// O toLocaleString trata dos pontos/vírgulas e casas decimais\nvar energia = parseFloat(data.total_energy || 0).toLocaleString('en-US', { maximumFractionDigits: 0 });\nvar receita = parseFloat(data.total_revenue || 0).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });\nvar idade = parseFloat(data.avg_age || 0).toFixed(1);\n\n// 3. Construir o HTML (KPI Cards)\nvar html = `\n<div style=\"display: flex; gap: 10px; justify-content: space-between; text-align: center; font-family: sans-serif;\">\n    \n    <div style=\"background: #e3f2fd; padding: 15px; border-radius: 8px; width: 100%; border: 1px solid #90caf9; box-shadow: 0 2px 4px rgba(0,0,0,0.1);\">\n        <h3 style=\"margin:0; color:#1565c0; font-size: 1.8em;\">\n            ${energia} <small style=\"font-size:0.5em; color:#666;\">kWh</small>\n        </h3>\n        <div style=\"color:#555; font-size:0.75em; font-weight:bold; text-transform:uppercase; margin-top:5px;\">Total Energy</div>\n    </div>\n\n    <div style=\"background: #e8f5e9; padding: 15px; border-radius: 8px; width: 100%; border: 1px solid #a5d6a7; box-shadow: 0 2px 4px rgba(0,0,0,0.1);\">\n        <h3 style=\"margin:0; color:#2e7d32; font-size: 1.8em;\">\n            ${receita} <small style=\"font-size:0.5em; color:#666;\">€</small>\n        </h3>\n        <div style=\"color:#555; font-size:0.75em; font-weight:bold; text-transform:uppercase; margin-top:5px;\">Total Revenue</div>\n    </div>\n\n    <div style=\"background: #fff3e0; padding: 15px; border-radius: 8px; width: 100%; border: 1px solid #ffcc80; box-shadow: 0 2px 4px rgba(0,0,0,0.1);\">\n        <h3 style=\"margin:0; color:#ef6c00; font-size: 1.8em;\">\n            ${idade} <small style=\"font-size:0.5em; color:#666;\">years</small>\n        </h3>\n        <div style=\"color:#555; font-size:0.75em; font-weight:bold; text-transform:uppercase; margin-top:5px;\">Avg Vehicle Age</div>\n    </div>\n\n</div>\n`;\n\nmsg.payload = html;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 840,
+        "wires": [
+            [
+                "eb70e6e35be10ff3"
+            ]
+        ]
+    },
+    {
+        "id": "eb70e6e35be10ff3",
+        "type": "ui-template",
+        "z": "f6f2187d.f17ca8",
+        "group": "7bd916981ebd1132",
+        "page": "",
+        "ui": "",
+        "name": "",
+        "order": 1,
+        "width": "12",
+        "height": "2",
+        "head": "",
+        "format": "<div v-html=\"msg.payload\"></div>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 860,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8ccead923daca378",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 1840,
+        "wires": [
+            [
+                "5aca7ab0df6e23db"
+            ]
+        ]
+    },
+    {
+        "id": "5aca7ab0df6e23db",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Select Stations",
+        "func": "msg.topic = `SELECT \n    charging.session_id AS 'ID',\n    charging.station_id AS 'Station',\n    charging.vehicle_model AS 'Vehicle',\n    charging.energy_consumed AS 'Energy',      -- Nome simples\n    charging.cost AS 'Cost',                   -- Nome simples\n    charging.duration AS 'Duration',           -- Nome simples\n    DATE_FORMAT(charging.start_time, '%Y-%m-%d %H:%i') AS 'Start_Time',\n    charging.state_of_charge_start AS 'SOC_Start',\n    charging.state_of_charge_end AS 'SOC_End',\n    ev_stations.cluster_profile AS 'Cluster'\nFROM charging\nJOIN ev_stations ON charging.station_id = ev_stations.station_id\nORDER BY charging.session_id DESC\nLIMIT 1000;`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 1840,
+        "wires": [
+            [
+                "b1a847af13e5beb7"
+            ]
+        ]
+    },
+    {
+        "id": "b1a847af13e5beb7",
+        "type": "mysql",
+        "z": "f6f2187d.f17ca8",
+        "mydb": "9db1eb2b3aada282",
+        "name": "",
+        "x": 550,
+        "y": 1840,
+        "wires": [
+            [
+                "da1c3de3af40d8e4"
+            ]
+        ]
+    },
+    {
+        "id": "da1c3de3af40d8e4",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Format Table",
+        "func": "var input_rows = msg.payload;\nvar output_rows = [];\n\ninput_rows.forEach(row => {\n\n    // 1. Traduzir Cluster\n    var cluster_name = \"N/A\";\n    switch (row['Cluster']) {\n        case 0: cluster_name = \"Regular AC Charging\"; break;\n        case 1: cluster_name = \"Top-Ups\"; break;\n        case 2: cluster_name = \"Fast Charging\"; break;\n        case 3: cluster_name = \"Medium Power DC Charging\"; break;\n    }\n\n    // 2. Mapear e Formatar\n    // Lemos as chaves simples do SQL (ex: row['Energy'])\n    var cleanRow = {\n        \"ID\": row['ID'],\n        \"Station\": row['Station'],\n        \"Vehicle\": row['Vehicle'],\n        \"Start Time\": row['Start_Time'] || \"---\",\n\n        // Formatação de Números\n        \"Duration (h)\": parseFloat(row['Duration'] || 0).toFixed(2),\n        \"Energy (kWh)\": parseFloat(row['Energy'] || 0).toFixed(2),\n        \"Cost (€)\": parseFloat(row['Cost'] || 0).toFixed(2),\n        \"SOC Start\": parseFloat(row['SOC_Start'] || 0).toFixed(1) + \"%\",\n        \"SOC End\": parseFloat(row['SOC_End'] || 0).toFixed(1) + \"%\",\n\n        \"Profile\": cluster_name\n    };\n\n    output_rows.push(cleanRow);\n});\n\nmsg.payload = output_rows;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 1840,
+        "wires": [
+            [
+                "49ee909824a29f43"
+            ]
+        ]
+    },
+    {
+        "id": "49ee909824a29f43",
+        "type": "ui-table",
+        "z": "f6f2187d.f17ca8",
+        "group": "c53beb9da55f750d",
+        "name": "Table of Used Stations",
+        "label": "Used Stations",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "maxrows": 0,
+        "passthru": false,
+        "autocols": true,
+        "showSearch": true,
+        "deselect": true,
+        "selectionType": "none",
+        "columns": [],
+        "mobileBreakpoint": "sm",
+        "mobileBreakpointType": "defaults",
+        "action": "replace",
+        "className": "",
+        "x": 920,
+        "y": 1840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "74258f3097726986",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Cluster Info 2",
+        "func": "msg.topic = `SELECT \n    CASE \n        WHEN session_profile = 0 THEN 'Emergência / Curta'\n        WHEN session_profile = 1 THEN 'Carga Completa' \n        WHEN session_profile = 2 THEN 'Top-up de Manutenção'\n    END as label,\n    COUNT(*) as value\nFROM charging\nWHERE session_profile IS NOT NULL\nGROUP BY session_profile;`\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1250,
+        "y": 380,
+        "wires": [
+            [
+                "ed69233392dbf333"
+            ]
+        ]
+    },
+    {
+        "id": "ed69233392dbf333",
+        "type": "mysql",
+        "z": "f6f2187d.f17ca8",
+        "mydb": "9db1eb2b3aada282",
+        "name": "",
+        "x": 1410,
+        "y": 380,
+        "wires": [
+            [
+                "e215b0c35175d2a4"
+            ]
+        ]
+    },
+    {
+        "id": "e215b0c35175d2a4",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "Cluster Debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1580,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "faf4c0973dedc22d",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Select Cluster 2",
+        "func": "msg.topic = `SELECT \n    CASE \n        WHEN session_profile = 0 THEN 'Emergency / Short (< 20%)'\n        WHEN session_profile = 1 THEN 'Full Charge (> 80%)' \n        WHEN session_profile = 2 THEN 'Convenience Top-up'\n        ELSE 'Processing...'\n    END AS series,\n    COUNT(*) AS data\nFROM charging\nWHERE session_profile IS NOT NULL\nGROUP BY session_profile\nORDER BY series;`\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 220,
+        "wires": [
+            [
+                "4782b9a0af683d3f"
+            ]
+        ]
+    },
+    {
+        "id": "4782b9a0af683d3f",
+        "type": "mysql",
+        "z": "f6f2187d.f17ca8",
+        "mydb": "9db1eb2b3aada282",
+        "name": "",
+        "x": 570,
+        "y": 220,
+        "wires": [
+            [
+                "5ba967a3ba0a1aa1",
+                "775e332fa53debd4"
+            ]
+        ]
+    },
+    {
+        "id": "5ba967a3ba0a1aa1",
+        "type": "ui-chart",
+        "z": "f6f2187d.f17ca8",
+        "group": "817a71b1bc239ab1",
+        "name": "Types of stations",
+        "label": "Types of stations",
+        "order": 2,
+        "chartType": "doughnut",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "",
+        "xAxisProperty": "label",
+        "xAxisPropertyType": "property",
+        "xAxisType": "radial",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "value",
+        "yAxisPropertyType": "property",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "replace",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#1c71d8",
+            "#f9f06b",
+            "#2ec27e",
+            "#c64600",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 750,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "775e332fa53debd4",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "Debug Cluster 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "7905510e3bf15d45",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 380,
+        "y": 1660,
+        "wires": [
+            [
+                "3b4c7fc57730e2be"
+            ]
+        ]
+    },
+    {
+        "id": "3b4c7fc57730e2be",
+        "type": "mqtt out",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "topic": "iot/ev-station/ml/run",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "db94ba65843983c6",
+        "x": 570,
+        "y": 1660,
+        "wires": []
+    }
+]
