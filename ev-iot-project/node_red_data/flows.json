@@ -172,7 +172,7 @@
     {
         "id": "817a71b1bc239ab1",
         "type": "ui-group",
-        "name": "Clusters",
+        "name": "Stations Cluster",
         "page": "109e7e388ed07dd0",
         "width": 6,
         "height": 1,
@@ -260,7 +260,7 @@
         "page": "109e7e388ed07dd0",
         "width": "12",
         "height": 1,
-        "order": 7,
+        "order": 9,
         "showTitle": true,
         "className": "",
         "visible": "true",
@@ -362,6 +362,34 @@
         "willMsg": {},
         "userProps": "",
         "sessionExpiry": ""
+    },
+    {
+        "id": "26640083ad4aba45",
+        "type": "ui-group",
+        "name": "Charging Cluster",
+        "page": "109e7e388ed07dd0",
+        "width": 6,
+        "height": 1,
+        "order": 7,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "987c54d9c58d6abf",
+        "type": "ui-group",
+        "name": "Typed of Day Charging",
+        "page": "109e7e388ed07dd0",
+        "width": 6,
+        "height": 1,
+        "order": 8,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
     },
     {
         "id": "4c6516c6fd5a96dc",
@@ -611,7 +639,7 @@
         "type": "function",
         "z": "f6f2187d.f17ca8",
         "name": "Format Map",
-        "func": "var stations = msg.payload;\nvar mapPoints = [];\n\nfor (var i = 0; i < stations.length; i++) {\n    var s = stations[i];\n    var color = \"#808080\";\n    switch (s.cluster_profile) {\n        case 0: color = \"#ff9f00\"; break;  // Regular AC Charging\n        case 1: color = \"#000000\"; break;  // Top-Ups\n        case 2: color = \"#00cc00\"; break;  // Fast-Charging\n        case 3: color = \"#4169e1\"; break;  // Medium-Energy DC Charging\n    }\n    mapPoints.push({\n        name: s.station_id, lat: s.latitude, lon: s.longitude, layer: \"Stations\",\n        cluster_profile: s.cluster_profile, \n        icon: \"circle\", iconColor: color, radius: 5,\n        popup: s.station_id\n    });\n}\n\nreturn [{payload: mapPoints}];",
+        "func": "var stations = msg.payload;\nvar mapPoints = [];\n\nfor (var i = 0; i < stations.length; i++) {\n    var s = stations[i];\n    var color = \"#808080\";\n    switch (s.cluster_profile) {\n        case 0: color = \"#008000\"; break;  // Regular AC Charging\n        case 1: color = \"#a0522d\"; break;  // Top-Ups\n        case 2: color = \"#4169e1\"; break;  // Fast-Charging\n        case 3: color = \"#fff000\"; break;  // Medium-Energy DC Charging\n    }\n    mapPoints.push({\n        name: s.station_id, lat: s.latitude, lon: s.longitude, layer: \"Stations\",\n        cluster_profile: s.cluster_profile, \n        icon: \"circle\", iconColor: color, radius: 5,\n        popup: s.station_id\n    });\n}\n\nreturn [{payload: mapPoints}];",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1038,7 +1066,8 @@
         "wires": [
             [
                 "2116c0536513065d",
-                "74258f3097726986"
+                "74258f3097726986",
+                "6198d86ba7563e19"
             ]
         ]
     },
@@ -1159,7 +1188,8 @@
                 "f81bfdd643d2a0d7",
                 "3c1636b7dcc5e6d9",
                 "707071518d93a043",
-                "faf4c0973dedc22d"
+                "faf4c0973dedc22d",
+                "74d1cba7e89cfd45"
             ]
         ]
     },
@@ -1772,7 +1802,7 @@
         "type": "function",
         "z": "f6f2187d.f17ca8",
         "name": "Cluster Info 2",
-        "func": "msg.topic = `SELECT \n    CASE \n        WHEN session_profile = 0 THEN 'Emergência / Curta'\n        WHEN session_profile = 1 THEN 'Carga Completa' \n        WHEN session_profile = 2 THEN 'Top-up de Manutenção'\n    END as label,\n    COUNT(*) as value\nFROM charging\nWHERE session_profile IS NOT NULL\nGROUP BY session_profile;`\n\nreturn msg;",
+        "func": "msg.topic = `SELECT \n    session_profile, \n    ROUND(AVG(state_of_charge_start), 1) as 'Initial SOC',\n    ROUND(AVG(state_of_charge_end - state_of_charge_start), 1) as 'Charged (%)',\n    ROUND(AVG(duration), 1) as 'Duration (h)'\nFROM charging\nWHERE session_profile IS NOT NULL\nGROUP BY session_profile;`\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1823,7 +1853,7 @@
         "type": "function",
         "z": "f6f2187d.f17ca8",
         "name": "Select Cluster 2",
-        "func": "msg.topic = `SELECT \n    CASE \n        WHEN session_profile = 0 THEN 'Emergency / Short (< 20%)'\n        WHEN session_profile = 1 THEN 'Full Charge (> 80%)' \n        WHEN session_profile = 2 THEN 'Convenience Top-up'\n        ELSE 'Processing...'\n    END AS series,\n    COUNT(*) AS data\nFROM charging\nWHERE session_profile IS NOT NULL\nGROUP BY session_profile\nORDER BY series;`\n\nreturn msg;",
+        "func": "msg.topic = `SELECT \n    CASE \n        WHEN session_profile = 1 THEN 'Full Charge (>50% added)'\n        WHEN session_profile = 2 THEN 'Quick Top-up' \n        WHEN session_profile = 0 THEN 'Long Duration / Parking'\n        ELSE 'Unknown'\n    END AS series,\n    COUNT(*) AS data\nFROM charging\nWHERE session_profile IS NOT NULL\nGROUP BY session_profile\nORDER BY series;`\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1857,15 +1887,15 @@
         "id": "5ba967a3ba0a1aa1",
         "type": "ui-chart",
         "z": "f6f2187d.f17ca8",
-        "group": "817a71b1bc239ab1",
-        "name": "Types of stations",
-        "label": "Types of stations",
-        "order": 2,
+        "group": "26640083ad4aba45",
+        "name": "Types of User Charging",
+        "label": "Types of User Charging",
+        "order": 1,
         "chartType": "doughnut",
         "category": "topic",
         "categoryType": "msg",
         "xAxisLabel": "",
-        "xAxisProperty": "label",
+        "xAxisProperty": "series",
         "xAxisPropertyType": "property",
         "xAxisType": "radial",
         "xAxisFormat": "",
@@ -1873,7 +1903,7 @@
         "xmin": "",
         "xmax": "",
         "yAxisLabel": "",
-        "yAxisProperty": "value",
+        "yAxisProperty": "data",
         "yAxisPropertyType": "property",
         "ymin": "",
         "ymax": "",
@@ -1887,9 +1917,9 @@
         "removeOlderUnit": "3600",
         "removeOlderPoints": "",
         "colors": [
-            "#1c71d8",
-            "#f9f06b",
-            "#2ec27e",
+            "#99c1f1",
+            "#f66151",
+            "#8ff0a4",
             "#c64600",
             "#a347e1",
             "#d62728",
@@ -1909,7 +1939,7 @@
         "height": 8,
         "className": "",
         "interpolation": "linear",
-        "x": 750,
+        "x": 770,
         "y": 220,
         "wires": [
             []
@@ -1951,9 +1981,9 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 380,
+        "payload": "run",
+        "payloadType": "str",
+        "x": 370,
         "y": 1660,
         "wires": [
             [
@@ -1977,6 +2007,171 @@
         "broker": "db94ba65843983c6",
         "x": 570,
         "y": 1660,
+        "wires": []
+    },
+    {
+        "id": "6198d86ba7563e19",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Cluster Info 3",
+        "func": "msg.topic = `SELECT \n    time_profile AS Cluster,\n    ROUND(AVG(pct_morning)*100,0) as Manha,\n    ROUND(AVG(pct_afternoon)*100,0) as Tarde,\n    ROUND(AVG(pct_evening)*100,0) as Noite,\n    ROUND(AVG(pct_night)*100,0) as Madrugada\nFROM (\n    SELECT \n        c.station_id,\n        s.time_profile,\n        SUM(CASE WHEN c.time_of_day = 'Morning' THEN 1 ELSE 0 END) / COUNT(*) as pct_morning,\n        SUM(CASE WHEN c.time_of_day = 'Afternoon' THEN 1 ELSE 0 END) / COUNT(*) as pct_afternoon,\n        SUM(CASE WHEN c.time_of_day = 'Evening' THEN 1 ELSE 0 END) / COUNT(*) as pct_evening,\n        SUM(CASE WHEN c.time_of_day = 'Night' THEN 1 ELSE 0 END) / COUNT(*) as pct_night\n    FROM charging c  -- Definimos que 'charging' agora é 'c'\n    JOIN ev_stations s ON c.station_id = s.station_id -- Definimos que 'ev_stations' é 's'\n    WHERE s.time_profile IS NOT NULL\n    GROUP BY c.station_id\n) as stats\nGROUP BY time_profile;`\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1250,
+        "y": 440,
+        "wires": [
+            [
+                "85776b02daec149c"
+            ]
+        ]
+    },
+    {
+        "id": "85776b02daec149c",
+        "type": "mysql",
+        "z": "f6f2187d.f17ca8",
+        "mydb": "9db1eb2b3aada282",
+        "name": "",
+        "x": 1410,
+        "y": 440,
+        "wires": [
+            [
+                "7448d72f73f0396f"
+            ]
+        ]
+    },
+    {
+        "id": "7448d72f73f0396f",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "Cluster Debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1580,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "74d1cba7e89cfd45",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Select Cluster 3",
+        "func": "msg.topic = `SELECT \n    CASE \n        WHEN time_profile = 0 THEN 'Morning (Work/Commute)'  \n        WHEN time_profile = 2 THEN 'Afternoon (Daytime)'     \n        WHEN time_profile = 1 THEN 'Night / Overnight'      \n        ELSE 'Unknown'\n    END AS series,\n    COUNT(*) AS data\nFROM ev_stations\nWHERE time_profile IS NOT NULL\nGROUP BY time_profile\nORDER BY series;`\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 100,
+        "wires": [
+            [
+                "a62c23863e20b90e"
+            ]
+        ]
+    },
+    {
+        "id": "a62c23863e20b90e",
+        "type": "mysql",
+        "z": "f6f2187d.f17ca8",
+        "mydb": "9db1eb2b3aada282",
+        "name": "",
+        "x": 570,
+        "y": 100,
+        "wires": [
+            [
+                "47565ad2fd40b80e",
+                "b58a828bb4a4064a"
+            ]
+        ]
+    },
+    {
+        "id": "47565ad2fd40b80e",
+        "type": "ui-chart",
+        "z": "f6f2187d.f17ca8",
+        "group": "987c54d9c58d6abf",
+        "name": "ToD Charging Cluster",
+        "label": "Time of Day",
+        "order": 1,
+        "chartType": "doughnut",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "",
+        "xAxisProperty": "series",
+        "xAxisPropertyType": "property",
+        "xAxisType": "radial",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "data",
+        "yAxisPropertyType": "property",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "replace",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#ffa348",
+            "#62a0ea",
+            "#5e5c64",
+            "#c64600",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 760,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b58a828bb4a4064a",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "Debug Cluster 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 160,
         "wires": []
     }
 ]

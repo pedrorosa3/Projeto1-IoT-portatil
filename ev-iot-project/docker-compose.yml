@@ -1,3 +1,4 @@
+version: '3.8'
 services:
   processor:
     build: ./MQTTprocessor
@@ -6,7 +7,7 @@ services:
       - ev_network
     environment:
       - MQTT_BROKER_HOST=mqtt-broker
-      - MQTT_BROKER_PORT=8883       
+      - MQTT_BROKER_PORT=8883
       - DB_HOST=database
       - DB_USER=root
       - DB_PASSWORD=evdatasetpassword
@@ -14,7 +15,7 @@ services:
       - PYTHONUNBUFFERED=1
     volumes:
       - ./EVDataset:/app/data
-      - ./Certificates:/app/certs   
+      - ./Certificates:/app/certs
     depends_on:
       mqtt-broker:
         condition: service_started
@@ -25,13 +26,13 @@ services:
     image: eclipse-mosquitto:latest
     container_name: mqtt-broker
     ports:
-      - 1883:1883 
-      - 8883:8883 
+      - 1883:1883
+      - 8883:8883
     volumes:
       - ./mosquitto/config:/mosquitto/config
       - ./mosquitto/data:/mosquitto/data
       - ./mosquitto/log:/mosquitto/log
-      - ./Certificates:/certs 
+      - ./Certificates:/certs
     networks:
       - ev_network
 
@@ -55,23 +56,24 @@ services:
       - 1880:1880
     volumes:
       - ./node_red_data:/data
-      - ev_network
+    networks:       
+      - ev_network  
 
   ml-processor:
-    build: ./MLprocessor 
+    build: ./MLprocessor
     container_name: ml-processor
     networks:
       - ev_network
     environment:
       - MQTT_BROKER_HOST=mqtt-broker
-      - MQTT_BROKER_PORT=8883     
+      - MQTT_BROKER_PORT=8883
       - DB_HOST=database
       - DB_USER=root
       - DB_PASSWORD=evdatasetpassword
       - DB_NAME=ev_charging_db
       - PYTHONUNBUFFERED=1
     volumes:
-      - ./Certificates:/app/certs   
+      - ./Certificates:/app/certs
     depends_on:
       mqtt-broker:
         condition: service_started
