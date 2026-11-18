@@ -1,0 +1,4 @@
+ev-iot-project/node_red_data/node_modules/
+ev-iot-project/node_red_data/.npm/
+ev-iot-project/mosquitto/log/
+__pycache__/
