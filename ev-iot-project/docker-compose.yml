@@ -1,4 +1,3 @@
-version: '3.8'
 services:
   processor:
     build: ./MQTTprocessor
@@ -23,7 +22,7 @@ services:
         condition: service_healthy
 
   mqtt-broker:
-    image: eclipse-mosquitto:latest
+    image: eclipse-mosquitto:2.0.22
     container_name: mqtt-broker
     ports:
       - 1883:1883
@@ -37,13 +36,13 @@ services:
       - ev_network
 
   database:
-    image: mysql:latest
+    image: mysql:26.10.0
     container_name: database
     environment:
       MYSQL_ROOT_PASSWORD: "evdatasetpassword"
       MYSQL_DATABASE: "ev_charging_db"
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-pevdatasetpassword"]
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "--protocol=tcp","-uroot", "-pevdatasetpassword"]
       interval: 5s
       timeout: 5s
       retries: 30
@@ -56,7 +55,7 @@ services:
       - ev_network
 
   dashboard:
-    image: nodered/node-red:latest
+    image: nodered/node-red:4.1.1
     container_name: dashboard
     # Instala os plugins de node_red_data/package.json (dashboard, worldmap, mysql) antes de arrancar
     entrypoint: ["sh", "-c", "cd /data && npm install --no-audit --no-fund --omit=dev && cd /usr/src/node-red && exec ./entrypoint.sh"]

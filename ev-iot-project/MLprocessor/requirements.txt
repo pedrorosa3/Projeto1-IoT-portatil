@@ -1,4 +1,4 @@
-pandas
-scikit-learn
-mysql-connector-python
+pandas==2.3.3
+scikit-learn==1.7.2
+mysql-connector-python==26.10.0
 paho-mqtt==1.6.1

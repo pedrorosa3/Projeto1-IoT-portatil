@@ -75,6 +75,18 @@ Toda a infraestrutura assenta numa arquitetura de microserviços, contentorizada
 | `ml-processor` | Python + scikit-learn | — | Treina/atualiza modelos K-Means de estações e sessões |
 | `dashboard` | Node-RED + FlowFuse Dashboard + Worldmap | `1880` | Visualização em tempo real e histórica |
 
+### 📦 Versões utilizadas
+
+As versões estão fixas para que o projeto se comporte sempre da mesma forma:
+
+| Componente | Versão |
+|---|---|
+| Eclipse Mosquitto | `2.0.22` |
+| MySQL | `26.10.0` |
+| Node-RED | `4.1.1` |
+| Python (imagens dos serviços) | `3.10.22-slim` |
+| pandas · scikit-learn · paho-mqtt · mysql-connector-python | `2.3.3` · `1.7.2` · `1.6.1` · `26.10.0` |
+
 > 🔒 As comunicações MQTT entre serviços usam **TLS** (porto `8883`), com certificados próprios em [`ev-iot-project/Certificates/`](ev-iot-project/Certificates/).
 
 ---
